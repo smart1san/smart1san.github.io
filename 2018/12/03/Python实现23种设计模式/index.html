@@ -261,11 +261,11 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">simpleFoodFactory</span><span class="params">()</span>:</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">createFood</span><span class="params">(cls,foodClass)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"Simple factory produce a instance."</span></span><br><span class="line">        foodIns = foodClass()</span><br><span class="line">        <span class="keyword">return</span> foodIns</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在场景中写成如下形式：</p>
+</li>
+</ul>
 <blockquote>
 <p>省去将工厂实例化的过程.这种模式就叫做<em>简单工厂模式</em></p>
 </blockquote>
-</li>
-</ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spicy_chicken_burger=simpleFoodFactory.createFood(spicyChickenBurger)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><code>burgerFactory</code>就是具体食物工厂的一层抽象。这种模式，就是<em>抽象工厂模式</em></p>
@@ -292,7 +292,7 @@
         </div>
 
         <section class="meta">
-            <time class="time" itemprop="dateUpdated" datetime="2018-12-03T05:40:47+08:00" content="2018-12-03">
+            <time class="time" itemprop="dateUpdated" datetime="2018-12-03T05:43:16+08:00" content="2018-12-03">
                 <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
                 本文最后更新于：2018-12-03
             </time>
