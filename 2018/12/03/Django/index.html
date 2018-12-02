@@ -165,7 +165,7 @@
         
         <time class="time">
             <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-            2018-12-02
+            2018-12-03
         </time>
         
           <div class="browse busuanzi"><i class="fas fa-eye fa-fw" aria-hidden="true"></i>
@@ -186,7 +186,7 @@
     <section class="article typo">
 
         <div class="article-entry" itemprop="articleBody">
-            <p>Web框架（Web framework）是一种开发框架，用来支持动态网站、网络应用和网络服务的开发。这大多数的web框架提供了一套开发和部署网站的方式，也为web行为提供了一套通用的方法。<br>Python的WEB框架有Django、Tornado、Flask 等多种，Django相较与其他WEB框架其优势为：大而全，框架本身集成了ORM、模型绑定、模板引擎、缓存、Session等诸多功能。</p>
+            <p><strong>Web框架</strong>（Web framework）是一种开发框架，用来支持动态网站、网络应用和网络服务的开发。这大多数的web框架提供了一套开发和部署网站的方式，也为web行为提供了一套通用的方法。Python的WEB框架有Django、Tornado、Flask 等多种，Django相较与其他WEB框架其<strong>优势</strong>为：大而全，框架本身集成了ORM、模型绑定、模板引擎、缓存、Session等诸多功能。</p>
 <a id="more"></a>
 <h1 id="一、Django-简介"><a href="#一、Django-简介" class="headerlink" title="一、Django 简介"></a>一、Django 简介</h1><h2 id="1-Http-协议特性"><a href="#1-Http-协议特性" class="headerlink" title="1.Http 协议特性"></a>1.Http 协议特性</h2><ul>
 <li>TCP/IP协议之上的应用层协议</li>
@@ -230,7 +230,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">视图函数</span><br><span class="line">url=reverse(&apos;app02:index&apos;)</span><br><span class="line">url2=reverse(&apos;app01:index&apos;)</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">模板</span><br><span class="line">&lt;a href=&quot;&#123;% url &apos;app02:index&apos;%&#125;&quot;&gt;LOL NB&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="8-Django-2-版的path"><a href="#8-Django-2-版的path" class="headerlink" title="8.Django 2.+版的path"></a>8.Django 2.+版的path</h2><p>①模板</p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from django.urls import path  </span><br><span class="line">from app01 import views  </span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(r'index/&lt;int:year&gt;/&lt;slug&gt;/', views.视图函数),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">from django.urls import path  </span></span><br><span class="line"><span class="xml">from app01 import views  </span></span><br><span class="line"><span class="xml">urlpatterns = [</span></span><br><span class="line"><span class="xml">    path(r'index/<span class="tag">&lt;<span class="name">int:year</span>&gt;</span>/<span class="tag">&lt;<span class="name">slug</span>&gt;</span>/', views.视图函数),</span></span><br><span class="line"><span class="xml">]</span></span><br></pre></td></tr></table></figure>
 <p>②基本规则</p>
 <ul>
 <li>使用尖括号(<code>&lt;&gt;</code>)从url中捕获值。</li>
@@ -248,7 +248,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyConverter</span>:</span>  </span><br><span class="line">    regex = <span class="string">"pattern"</span>  </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">to_python</span><span class="params">(self, value)</span>:</span>  </span><br><span class="line">        <span class="keyword">return</span> int(value)  </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">to_url</span><span class="params">(self, value)</span>:</span>  </span><br><span class="line">        <span class="keyword">return</span> <span class="string">'%04d'</span> % value</span><br></pre></td></tr></table></figure>
 <p>urls.py</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> register_converter, path  </span><br><span class="line"><span class="keyword">from</span> app01 <span class="keyword">import</span> converters, views  </span><br><span class="line">①注册</span><br><span class="line">register_converter(converters.MyConverter, <span class="string">'type'</span>) </span><br><span class="line">②使用</span><br><span class="line">urlpatterns = [  </span><br><span class="line">    path(<span class="string">'articles/&lt;type:year&gt;/'</span>, views.year_archive),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<h1 id="三、视图"><a href="#三、视图" class="headerlink" title="三、视图"></a>三、视图</h1><h2 id="1-三剑客"><a href="#1-三剑客" class="headerlink" title="1.三剑客"></a>1.三剑客</h2><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from django.shortcuts import render, HttpResponse, redirect</span><br><span class="line"></span><br><span class="line">视图层，熟练掌握两个对象即可：请求对象(request)和响应对象(HttpResponse)</span><br></pre></td></tr></table></figure>
+<h1 id="三、视图"><a href="#三、视图" class="headerlink" title="三、视图"></a>三、视图</h1><h2 id="1-三剑客"><a href="#1-三剑客" class="headerlink" title="1.三剑客"></a>1.三剑客</h2><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">from django.shortcuts import render, HttpResponse, redirect</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">视图层，熟练掌握两个对象即可：请求对象(request)和响应对象(HttpResponse)</span></span><br></pre></td></tr></table></figure>
 <h2 id="2-HttpRequest对象"><a href="#2-HttpRequest对象" class="headerlink" title="2. HttpRequest对象"></a>2. HttpRequest对象</h2><ul>
 <li>Django将请求报文中的请求行、首部信息、内容主体封装成 HttpRequest 类中的属性。</li>
 </ul>
@@ -911,9 +911,9 @@
         </div>
 
         <section class="meta">
-            <time class="time" itemprop="dateUpdated" datetime="2018-12-02T23:46:48+08:00" content="2018-12-02">
+            <time class="time" itemprop="dateUpdated" datetime="2018-12-03T00:01:43+08:00" content="2018-12-03">
                 <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
-                本文最后更新于：2018-12-02
+                本文最后更新于：2018-12-03
             </time>
             
                 
@@ -924,6 +924,31 @@
             
         </section>
 
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
+                            <h4>
+                                <a href="/2018/12/03/MySQL/" rel="prev" title="MySQL基础知识">
+                                  
+                                      MySQL基础知识
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                                    <a class="tag" href="/tags/MySQL/">MySQL</a>, <a class="tag" href="/tags/sql/">sql</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+            </div>
         
 
     </section>
@@ -939,6 +964,15 @@
 
             
                 
+
+    <div class="recommended_posts">
+        <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
+        <ul>
+            
+                <li><a href="http://yoursite.com/2018/12/03/MySQL/">MySQL基础知识</a></li>
+            
+        </ul>
+    </div>
 
 
             
@@ -1028,6 +1062,8 @@
                 
                     <li><a class="flat-box" href="/categories/Django/"><div class="name">Django</div><div class="badge">1</div></a></li>
                 
+                    <li><a class="flat-box" href="/categories/MySQL/"><div class="name">MySQL</div><div class="badge">1</div></a></li>
+                
             </ul>
         
     </div>
@@ -1041,7 +1077,7 @@
             <div><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;标签</div>
         </header>
         <div class="content pure">
-            <a href="/tags/Django/" style="font-size: 14px; color: #999">Django</a> <a href="/tags/MTV/" style="font-size: 14px; color: #999">MTV</a>
+            <a href="/tags/Django/" style="font-size: 14px; color: #999">Django</a> <a href="/tags/MTV/" style="font-size: 14px; color: #999">MTV</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a>
         </div>
     </section>
 

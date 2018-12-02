@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Archives: 2018/12 | VIP</title>
+  <title>MySQL基础知识 | VIP</title>
   
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -158,28 +158,21 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            
-	
-    <script>
-        window.subData= { title:'year : 2018.12'}
-    </script>
-
-
-<section class="post-list">
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
+            <article id="post-MySQL" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
     <section class="meta">
-        <h2 class="title">
-            <a href="/2018/12/03/MySQL/">
-                
-                    MySQL基础知识
-                
-            </a>
-        </h2>
+        
+            <h1 class="title">MySQL基础知识</h1>
+        
         <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-12-03
+            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+            2018-12-03
         </time>
+        
+          <div class="browse busuanzi"><i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+            <span id="busuanzi_value_page_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+          </div>
+        
+
         
     
     <div class="cats">
@@ -191,7 +184,9 @@
     </section>
 
     <section class="article typo">
-        <p>MySQL是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就<strong>增加了速度并提高了灵活性</strong>。Linux作为操作系统，Apache 或Nginx作为 Web 服务器，MySQL 作为数据库，PHP/Perl/Python作为服务器端脚本解释器。由于这四个软件都是免费或开放源码软件（FLOSS)，因此使用这种方式不用花一分钱（除开人工成本）就可以建立起一个稳定、免费的网站系统，被业界称为“LAMP“或“LNMP”组合。</p>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>MySQL是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就<strong>增加了速度并提高了灵活性</strong>。Linux作为操作系统，Apache 或Nginx作为 Web 服务器，MySQL 作为数据库，PHP/Perl/Python作为服务器端脚本解释器。由于这四个软件都是免费或开放源码软件（FLOSS)，因此使用这种方式不用花一分钱（除开人工成本）就可以建立起一个稳定、免费的网站系统，被业界称为“LAMP“或“LNMP”组合。</p>
 <h1 id="一、-Mysql简单认识"><a href="#一、-Mysql简单认识" class="headerlink" title="一、 Mysql简单认识"></a>一、 Mysql简单认识</h1><h2 id="1-1-数据（Data）的概念"><a href="#1-1-数据（Data）的概念" class="headerlink" title="1.1 数据（Data）的概念"></a>1.1 数据（Data）的概念</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">数据是用来描述事物的符号记录,它既可以是数字,也可以是文字、图片、图像、声音等,数据的表现形式多种多样,但它们都可以经过数字化之后存入计算机。</span><br><span class="line"><span class="comment">&lt;!-- eg --&gt;</span></span><br><span class="line">Luffu,male,18,ONE-PIECE</span><br></pre></td></tr></table></figure>
 <h2 id="1-2-数据库（DataBase）的概念"><a href="#1-2-数据库（DataBase）的概念" class="headerlink" title="1.2 数据库（DataBase）的概念"></a>1.2 数据库（DataBase）的概念</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数据库是以某种有组织方式存储的数据集合,即保存有组织的数据的容器(通常是一个文件或者一组文件);可将其想象成一个文件柜,此文件柜是存放数据(不管数据是什么以及如何组织)的物理位置(计算机的存储设备上)。</span><br></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--注意概念的混淆--&gt;</span></span><br><span class="line">数据库这个属于并不是人们通常使用的数据库软件,数据库软件应称为DBMS(数据库管理系统)。</span><br></pre></td></tr></table></figure>
@@ -560,74 +555,94 @@
 <h4 id="2-3-配合参数使用"><a href="#2-3-配合参数使用" class="headerlink" title="2.3 配合参数使用"></a>2.3 配合参数使用</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 创建 --&gt;</span></span><br><span class="line">CREATE PROCEDURE productpricing(</span><br><span class="line">	OUT pl DECIMAL(8,2),  <span class="comment">&lt;!--out关键字指出相应参数用来从存储过程传出值给调用者,IN表示传递给存储过程--&gt;</span></span><br><span class="line">	OUT ph DECIMAL(8,2),  <span class="comment">&lt;!--INOUT表示对存储过程传入和传出--&gt;</span></span><br><span class="line">	OUT pa DECIMAL(8,2),  <span class="comment">&lt;!--DECIMAL为数据类型--&gt;</span></span><br><span class="line">)</span><br><span class="line">BEGIN</span><br><span class="line">	SELECT Min(prod_price) INTO pl from products; <span class="comment">&lt;!--存储过程代码位于begin与end之间--&gt;</span></span><br><span class="line">	SELECT Max(prod_price) INTO ph from products; <span class="comment">&lt;!--通过INTO关键字保存至相应的变量--&gt;</span></span><br><span class="line">	SELECT Avg(prod_price) INTO pa from products;</span><br><span class="line">END;</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 使用 --&gt;</span></span><br><span class="line">CALL productpricing(@pricelow,</span><br><span class="line">				   @pricehigh,</span><br><span class="line">				   @priceaverage);</span><br><span class="line">这条语句并不会显示任何数据。仅仅是返回以后可以显示的变量;若想要显示数据,可以使用一下语句：</span><br><span class="line">SELECT @pricehigh, @pricelow, @priceaverage;</span><br></pre></td></tr></table></figure>
 <h4 id="2-4-检查存储过程"><a href="#2-4-检查存储过程" class="headerlink" title="2.4 检查存储过程"></a>2.4 检查存储过程</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SHOW CREATE PROCEDURE ordertotal; <span class="comment">&lt;!--显示传建一个存储过程的create语句--&gt;</span></span><br><span class="line">SHOW PROCEDURE STATUS;  <span class="comment">&lt;!--显示何时、有谁创建等详细信息的存储过程--&gt;</span></span><br><span class="line">SHOW PROCEDURE STATUS LIKE 'ORDERTOTAL'; <span class="comment">&lt;!--过滤模式--&gt;</span></span><br></pre></td></tr></table></figure>
 
-        
+        </div>
+
+        <section class="meta">
+            <time class="time" itemprop="dateUpdated" datetime="2018-12-03T00:14:09+08:00" content="2018-12-03">
+                <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
+                本文最后更新于：2018-12-03
+            </time>
+            
+                
+                <div class="tags">
+                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                    <a class="tag" href="/tags/MySQL/">MySQL</a>, <a class="tag" href="/tags/sql/">sql</a>
+                </div>
+            
+        </section>
 
         
-            <div class="full-width auto-padding tags">
+            <div class="prev-next">
                 
-                    <a href="/tags/MySQL/"><i class="fas fa-tag fa-fw"></i>&nbsp;MySQL</a>
                 
-                    <a href="/tags/sql/"><i class="fas fa-tag fa-fw"></i>&nbsp;sql</a>
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2018/12/03/Django/" rel="prev" title="Django基础知识">
+                                    
+                                        Django基础知识
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                                    <a class="tag" href="/tags/Django/">Django</a>, <a class="tag" href="/tags/MTV/">MTV</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
                 
             </div>
         
+
     </section>
+
 </article>
 
-        </div>
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
-    <section class="meta">
-        <h2 class="title">
-            <a href="/2018/12/03/Django/">
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+    <article class="post white-box comments">
+        <section class="article typo">
+
+            
                 
-                    Django基础知识
-                
-            </a>
-        </h2>
-        <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-12-03
-        </time>
-        
-    
-    <div class="cats">
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/Django/">Django</a>
+
+    <div class="recommended_posts">
+        <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
+        <ul>
+            
+                <li><a href="http://yoursite.com/2018/12/03/Django/">Django基础知识</a></li>
+            
+        </ul>
     </div>
 
 
-    </section>
+            
 
-    <section class="article typo">
-        <p><strong>Web框架</strong>（Web framework）是一种开发框架，用来支持动态网站、网络应用和网络服务的开发。这大多数的web框架提供了一套开发和部署网站的方式，也为web行为提供了一套通用的方法。Python的WEB框架有Django、Tornado、Flask 等多种，Django相较与其他WEB框架其<strong>优势</strong>为：大而全，框架本身集成了ORM、模型绑定、模板引擎、缓存、Session等诸多功能。</p>
-        
-            <div class="readmore">
-                <a href="/2018/12/03/Django/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
+            
 
-        
-            <div class="full-width auto-padding tags">
                 
-                    <a href="/tags/Django/"><i class="fas fa-tag fa-fw"></i>&nbsp;Django</a>
+
                 
-                    <a href="/tags/MTV/"><i class="fas fa-tag fa-fw"></i>&nbsp;MTV</a>
+
                 
-            </div>
-        
-    </section>
-</article>
+            
 
-        </div>
-    
-</section>
+        </section>
+    </article>
 
 
-
+<script>
+    window.subData = {
+        title: 'MySQL基础知识',
+        tools: true
+    }
+</script>
 
 
         </div>
@@ -717,6 +732,16 @@
     
     
         
+    <section class="m_widget toc-wrapper">
+        <header class="header pure">
+            <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;目录</div>
+            <div class="wrapper"><a class="s-toc rightBtn" title="固定到顶部" target="_blank" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+        </header>
+        <div class="content pure">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、-Mysql简单认识"><span class="toc-text">一、 Mysql简单认识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-数据（Data）的概念"><span class="toc-text">1.1 数据（Data）的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-数据库（DataBase）的概念"><span class="toc-text">1.2 数据库（DataBase）的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-表（table）"><span class="toc-text">1.3 表（table）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-记录"><span class="toc-text">1.4 记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-主键（primary-key）"><span class="toc-text">1.5 主键（primary key）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-数据库服务器、数据库管理系统、数据库、表与记录的关系-重点在于理解"><span class="toc-text">1.6 数据库服务器、数据库管理系统、数据库、表与记录的关系(重点在于理解)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-SQL的概念"><span class="toc-text">2 SQL的概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、-Mysql基础操作"><span class="toc-text">二、 Mysql基础操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-连接MySQL"><span class="toc-text">1 连接MySQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-选择数据库"><span class="toc-text">2 选择数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-常用数据库和表的SQL-语句"><span class="toc-text">3 常用数据库和表的SQL 语句</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、-检索数据"><span class="toc-text">三、 检索数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-select语句"><span class="toc-text">1 select语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-排序检索数据"><span class="toc-text">2 排序检索数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-过滤数据"><span class="toc-text">3 过滤数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-数据过滤升级"><span class="toc-text">4 数据过滤升级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-用通配符进行过滤"><span class="toc-text">5 用通配符进行过滤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-正则"><span class="toc-text">6 正则</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、-字段"><span class="toc-text">四、 字段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-字段"><span class="toc-text">1 字段</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、-聚合函数"><span class="toc-text">五、 聚合函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-聚合函数"><span class="toc-text">1 聚合函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、-数据分组"><span class="toc-text">六、 数据分组</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建分组"><span class="toc-text">1 创建分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-过滤分组"><span class="toc-text">2 过滤分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-分组和排序"><span class="toc-text">3 分组和排序</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、-关键词执行顺序汇总"><span class="toc-text">七、 关键词执行顺序汇总</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八、-子查询和组合查询"><span class="toc-text">八、 子查询和组合查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-子查询"><span class="toc-text">1 子查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-组合查询"><span class="toc-text">2 组合查询</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#九、-联结表和创建高级联结"><span class="toc-text">九、 联结表和创建高级联结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-联结"><span class="toc-text">1 联结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-高级联结"><span class="toc-text">2 高级联结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十、-数据操作"><span class="toc-text">十、 数据操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-插入数据"><span class="toc-text">1 插入数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-更新数据"><span class="toc-text">2 更新数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-删除数据"><span class="toc-text">3 删除数据</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十一、-表操作"><span class="toc-text">十一、 表操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建表"><span class="toc-text">1 创建表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-更新表"><span class="toc-text">2 更新表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-删除表"><span class="toc-text">3 删除表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-重命名表"><span class="toc-text">4 重命名表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十二、-视图"><span class="toc-text">十二、 视图</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-视图"><span class="toc-text">1 视图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十三、-游标"><span class="toc-text">十三、 游标</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-游标"><span class="toc-text">1 游标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-使用游标"><span class="toc-text">2 使用游标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-创建游标"><span class="toc-text">2.1 创建游标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-打开和关闭游标"><span class="toc-text">2.2 打开和关闭游标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-使用游标数据"><span class="toc-text">2.3 使用游标数据</span></a></li></ol></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#十五、-触发器"><span class="toc-text">十五、 触发器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-触发器"><span class="toc-text">1 触发器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-创建触发器"><span class="toc-text">2 创建触发器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-删除触发器"><span class="toc-text">3 删除触发器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-INSERT-触发器"><span class="toc-text">4 INSERT 触发器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-DELETE-触发器"><span class="toc-text">5 DELETE 触发器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-UPDATE-触发器"><span class="toc-text">6 UPDATE 触发器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十六、-事物处理"><span class="toc-text">十六、 事物处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-事物处理"><span class="toc-text">1 事物处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-控制事物处理"><span class="toc-text">2 控制事物处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十七、-存储过程"><span class="toc-text">十七、 存储过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-使用存储过程的原因"><span class="toc-text">1 使用存储过程的原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-存储过程的使用"><span class="toc-text">2 存储过程的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-创建存储过程"><span class="toc-text">2.1 创建存储过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-删除存储过程"><span class="toc-text">2.2 删除存储过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-配合参数使用"><span class="toc-text">2.3 配合参数使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-检查存储过程"><span class="toc-text">2.4 检查存储过程</span></a></li></ol></li></ol></li>
+        </div>
+    </section>
+
 
     
     
@@ -817,6 +842,10 @@
 <script src="/js/search.js"></script>
 <script src="/js/app.js"></script>
 
+
+    
+    
+    
 
 
 
