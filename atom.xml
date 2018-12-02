@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-02T19:06:24.566Z</updated>
+  <updated>2018-12-02T20:25:42.652Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python实现23种设计模式</title>
+    <link href="http://yoursite.com/2018/12/03/Python%E5%AE%9E%E7%8E%B023%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2018/12/03/Python实现23种设计模式/</id>
+    <published>2018-12-02T20:25:42.652Z</published>
+    <updated>2018-12-02T20:25:42.652Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268/sign=e2a135117d1ed21b79c929e3956fddae/faedab64034f78f092033e1079310a55b2191ccc.jpg" alt="python"></p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268/sign=e2a135117d1ed21b79c929e3956fddae/faedab64034f78f092033e1079310a55b2191ccc.jpg&quot; alt=&quot;python&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python 设计模式" scheme="http://yoursite.com/categories/Python-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式</title>
+    <link href="http://yoursite.com/2018/12/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2018/12/03/设计模式/</id>
+    <published>2018-12-02T20:25:42.622Z</published>
+    <updated>2018-12-02T20:25:42.624Z</updated>
+    
+    <content type="html"><![CDATA[<p>设计模式是面对各种问题进行提炼和抽象而形成的解决方案。这些设计方案是前人不断试验，考虑了封装性、复用性、效率、可修改、可移植等各种因素的高度总结。模式不是代码，而是某类问题的通用设计解决方案。</p><a id="more"></a><h1 id="一、设计模式与架构、框架的关系"><a href="#一、设计模式与架构、框架的关系" class="headerlink" title="一、设计模式与架构、框架的关系"></a>一、设计模式与<em>架构</em>、<em>框架</em>的关系</h1><ul><li><p>1.软件框架与设计模式的关系</p><blockquote><p>软件框架随着软件工程的发展而出现，所谓的软件框架，是提取了特定领域的软件的共性部分所形成的软件体系，它并不是一个成熟的软件，而更像是一个“半成品”，程序员在框架之上，可以很方便地某些特定领域实现又快又可靠的二次开发。<br>设计模式和软件框架在软件设计中是两个不同的研究领域：A、设计模式如前边的定义所讲，它指的是针对一类问题的解决方法，一个设计模式可应用于不同的框架和被不同的语言所实现；而框架则是一个应用的体系结构，是一种或多种设计模式和代码的混合体；B、设计模式相较于框架更容易移植，并且可以用各种语言实现，而软件框架则受限于领域大环境。虽然设计模式和软件框架有很多不同，但在某些方面他们二者是统一的，即重视软件复用，提高开发效率。</p></blockquote></li><li><p>2.软件架构与设计模式的关系</p><blockquote><p>软件架构是个比较大的概念，架构要考虑软件的整体结构、层次划分以及不同部分间的协作和交互等，架构的着眼点偏整体。相比之下，框架和设计模式的范围则具体很多，框架着眼于领域内的解决方法，而设计模式则针对一类问题的解决方案和设计思路。<br>总体来说，软件架构可以由不同的框架和不同的设计模式，再加上特定的构件组合来实现；框架可以根据设计模式结合特定编程语言和环境来实现。设计模式就是解决单一问题的设计思路和解决方法。</p></blockquote></li></ul><h1 id="二、设计模式的意义"><a href="#二、设计模式的意义" class="headerlink" title="二、设计模式的意义"></a>二、设计模式的意义</h1><blockquote><p>由于公司人事的变动，代码非常有可能会被移交，即代码的编写者和维护者很有可能会是不同的人。那么代码的可读性就显得非常重要了。由于高级语言的出现，让机器读懂你的意图已经不是最主要的“矛盾”，而让人读懂你的意图才是最重要。按照设计模式编写的代码，其可读性也会大大提升，利于团队项目的继承和扩展</p></blockquote><h1 id="三、设计模式的种类"><a href="#三、设计模式的种类" class="headerlink" title="三、设计模式的种类"></a>三、设计模式的种类</h1><ul><li><p>1.创建类设计模式（5种）</p><blockquote><p>单例模式、工厂模式（简单工厂模式、抽象工厂模式）、建造者模式、原型模式</p></blockquote></li><li><p>2.结构类设计模式（7种）</p><blockquote><p>代理模式、装饰器模式、适配器模式、门面模式、组合模式、享元模式、桥梁模式</p></blockquote></li><li><p>3.行为类设计模式（11种）</p><blockquote><p>策略模式、责任链模式、命令模式、中介者模式、模板模式、迭代器模式、访问者模式、观察者模式、解释器模式、备忘录模式、状态模式</p></blockquote></li></ul><h1 id="四、设计模式遵循的六大原则"><a href="#四、设计模式遵循的六大原则" class="headerlink" title="四、设计模式遵循的六大原则"></a>四、设计模式遵循的六大原则</h1><blockquote><p>设计模式与设计原则，基本符合规则与原则的关系，设计模式是一个个具体问题的解决方案，设计原则则反映了这些设计模式的指导思想；同时，设计原则可衍生出的设计模式也不仅限于上述介绍到了23种设计模式，任何一种针对特定业务场景中的解决方法，虽然找不到对应的设计模式与之匹配，但若符合设计原则，也可以认为是一种全新的设计模式。从这个意义上来说，设计模式是程序设计方法的形，而设计原则是程序设计方法的神。</p></blockquote><ul><li><p>1.开闭原则（Open Close Principle）</p><blockquote><p>开闭原则是非常基础的一个原则，也有人把开闭原则称为“原则的原则”。前面讲到过，模块分原子模块，低层模块，高层模块，业务层可以认为是最高层次的模块。对扩展开放，意味着模块的行为是可以扩展的，当高层模块需求改变时，我们可以对低层模块进行扩展，使其具有满足高层模块的新功能；对修改关闭，即对低层模块行为进行扩展时，不必改动模块的源代码。最理想的情况是，业务变动时，仅修改业务代码，不修改依赖的模块（类、函数等）代码，通过扩展依赖的模块单元来实现业务变化。</p></blockquote>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">假设一个原始基类水果类，苹果类是它的派生类，苹果中包含水果的各种属性，如形状、颜色等；另有两个类，农民类和花园类，最高层次（业务层次）为农民在花园种苹果。如果此时，农民决定不种苹果了，改种梨，符合OCP原则的设计应该为基于水果类构建一个新的类，即梨类（对扩展开放），而并不应该去修改苹果类，使它成为一个梨类（对修改关闭）。修改应仅在最高层，即业务层中进行。</span><br></pre></td></tr></table></figure></li><li><p>2.里氏代换原则（Liskov Substitution Principle）</p><blockquote><p>面向对象设计的最为基本原则之一。 里氏替换原则的含义为：任何基类可以出现的地方，子类一定可以出现。 LSP是继承复用的基石，只有当子类可以替换掉基类，软件单位的功能不受到影响时，基类才能真正被复用，子类也能够在基类的基础上增加新的行为。</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对于一个鸟类，可以衍生出麻雀、喜鹊、布谷等子类，这些子类都可继承鸟类的鸣叫、飞行、吃食等接口。而对于一个鸡类，虽然它在生物学上属于鸟类，但它不会飞，那么符合LSP设计原则的情况下，鸡就不应该是鸟的一个子类：在鸟类调用飞行接口的地方，鸡类并不能出现。如果鸡类要使用鸟类的接口，应该使用关联关系，而不是继承关系。</span><br></pre></td></tr></table></figure></blockquote></li></ul><ul><li><p>3.依赖倒转原则（Dependence Inversion Principle）</p><blockquote><p>高层模块不应该依赖于低层模块，两者都应该依赖其抽象。抽象不应该依赖于细节，细节应该依赖于抽象。我们将每个不可细分的逻辑叫作原子逻辑，原子逻辑组装，形成低层模块，低层模块组装形成高层模块。依赖倒置原则的含义为，高层模块和低层模块都应该由各自的抽象模块派生而来，同时接口设计应该依赖于抽象，而非具体模块。</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">司机与汽车是依赖的关系，司机可以有实习司机类、老司机类等派生；汽车可以有轿车、SUV、卡车等派生类。如果司机中设计一个接口drive，汽车是其参数，符合DIP设计原则的参数，应该是在基类司机类中，将基类汽车类作为参数，而司机的派生类中，drive的参数同样应该为基类汽车类，而不应该是汽车类的任一个派生类。如果规定实习司机只能开轿车等业务逻辑，应该在其接口中进行判断，而不应该将参数替换成子类轿车。</span><br></pre></td></tr></table></figure></blockquote></li><li><p>4.接口隔离原则（Interface Segregation Principle）</p><blockquote><p>类间的依赖关系不应该建立一个大的接口，而应该建立其最小的接口，即客户端不应该依赖那些它不需要的接口。这里的接口的概念是非常重要的。从逻辑上来讲，这里的接口可以指一些属性和方法的集合；从业务上来讲，接口就可以指特定业务下的接口（如函数，URL调用等）。接口应该尽量小，同时仅留给客户端必要的接口，弃用没有必要的接口。</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果要根据具体的数据，生成饼图、直方图、表格，这个类该如何设计？如果将生成饼图、直方图、表格等“接口”（这里的接口就是“操作”的集合的概念），写在一个类中，是不符合接口隔离原则的。符合ISP原则的设计应该是设计三个类，每个类分别实现饼图、直方图、表格的绘制。</span><br></pre></td></tr></table></figure></blockquote></li><li><p>5.迪米特法则（最少知识原则）（Demeter Principle）（Least Knowledge Principle）</p><blockquote><p>一个实体应当尽量少的与其他实体之间发生相互作用，使得系统功能模块相对独立。</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个公司有多个部门，每个部门有多个员工，如果公司CEO要下发通知给每个员工，是调用接口直接通知所有员工么？其实不然，CEO只需和它的“朋友”类部门Leader交流就好，部门Leader再下发通知信息即可。而CEO类不需要与员工进行“交流”。</span><br></pre></td></tr></table></figure></blockquote></li><li><p>6.合成复用原则（Composite Reuse Principle）</p><blockquote><p>尽量使用合成/聚合的方式，而不是使用继承。继承实际上破坏了类的封装性，超类的方法可能会被子类修改。</p></blockquote></li></ul><h1 id="五、设计模式的优点"><a href="#五、设计模式的优点" class="headerlink" title="五、设计模式的优点"></a>五、设计模式的优点</h1><blockquote><p>设计原则是设计模式的提炼，因而设计原则的好处与设计模式是一致的，即：代码易于理解；更适于团体合作；适应需求变化等。</p></blockquote><h1 id="六、设计模式与设计原则"><a href="#六、设计模式与设计原则" class="headerlink" title="六、设计模式与设计原则"></a>六、设计模式与设计原则</h1><ul><li><p>1.创建类设计模式</p><blockquote><p>工厂模式：工厂方法模式是一种解耦结构，工厂类只需要知道抽象产品类，符合最少知识原则（迪米特法则）；同时符合依赖倒置原则和里氏替换原则；</p></blockquote><blockquote><p>抽象工厂模式：抽象工厂模式具有工厂模式的优点，但同时，如果产品族要扩展，工厂类也要修改，违反了开闭原则；</p></blockquote><blockquote><p>模板模式：优秀的扩展能力符合开闭原则。</p></blockquote></li><li><p>2.结构类设计模式</p><blockquote><p>代理模式：代理模式在业务逻辑中将对主体对象的操作进行封装，合适的应用会符合开闭原则和单一职责原则；事实上，几乎带有解耦作用的结构类设计模式都多少符合些开闭原则；</p></blockquote><blockquote><p>门面模式：门面模式不符合开闭原则，有时不符合单一职责原则，如若不注意，也会触碰接口隔离原则；</p></blockquote><blockquote><p>组合模式：符合开闭原则，但由于一般在拼接树时使用实现类，故不符合依赖倒置原则；</p></blockquote><blockquote><p>桥梁模式：桥梁模式堪称依赖倒置原则的典范，同时也符合开闭原则。</p></blockquote></li><li><p>3.行为类设计模式</p><blockquote><p>策略模式：符合开闭原则，但高层模块调用时，不符合迪米特法则。行为类设计模式多少会符合些单一职责原则，典型的如观察者模式、中介者模式、访问者模式等；</p></blockquote><blockquote><p>责任链模式：符合单一职责原则和迪米特法则；</p></blockquote><blockquote><p>命令模式：符合开闭原则。</p></blockquote><blockquote><p>在不同的业务逻辑中，不同的设计模式也会显示出不同的设计原则特点，从这个意义上来说，设计模式是设计原则的体现，但体现不是固定的，是根据业务而有所不同的。</p></blockquote></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;设计模式是面对各种问题进行提炼和抽象而形成的解决方案。这些设计方案是前人不断试验，考虑了封装性、复用性、效率、可修改、可移植等各种因素的高度总结。模式不是代码，而是某类问题的通用设计解决方案。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Git的使用</title>
