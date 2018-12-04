@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>VIP</title>
+  <title>并发编程之多进程 | VIP</title>
   
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -158,23 +158,21 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            
-
-<section class="post-list">
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
+            <article id="post-并发编程之IO模型" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
     <section class="meta">
-        <h2 class="title">
-            <a href="/2018/12/05/并发编程之协程/">
-                
-                    并发编程之多进程
-                
-            </a>
-        </h2>
+        
+            <h1 class="title">并发编程之多进程</h1>
+        
         <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-12-05
+            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+            2018-12-05
         </time>
+        
+          <div class="browse busuanzi"><i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+            <span id="busuanzi_value_page_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+          </div>
+        
+
         
     
     <div class="cats">
@@ -186,208 +184,132 @@
     </section>
 
     <section class="article typo">
-        <a id="more"></a>
-        
 
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/协程/"><i class="fas fa-tag fa-fw"></i>&nbsp;协程</a>
-                
-            </div>
-        
-    </section>
-</article>
-
+        <div class="article-entry" itemprop="articleBody">
+            <a id="more"></a>
         </div>
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
-    <section class="meta">
-        <h2 class="title">
-            <a href="/2018/12/05/并发编程之IO模型/">
-                
-                    并发编程之多进程
-                
-            </a>
-        </h2>
-        <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-12-05
-        </time>
-        
-    
-    <div class="cats">
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/并发编程/">并发编程</a>
-    </div>
 
-
-    </section>
-
-    <section class="article typo">
-        <a id="more"></a>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/IO模型/"><i class="fas fa-tag fa-fw"></i>&nbsp;IO模型</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-        </div>
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
-    <section class="meta">
-        <h2 class="title">
-            <a href="/2018/12/05/并发编程之多线程/">
-                
-                    并发编程之多进程
-                
-            </a>
-        </h2>
-        <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-12-05
-        </time>
-        
-    
-    <div class="cats">
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/并发编程/">并发编程</a>
-    </div>
-
-
-    </section>
-
-    <section class="article typo">
-        <a id="more"></a>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/多线程/"><i class="fas fa-tag fa-fw"></i>&nbsp;多线程</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-        </div>
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
-    <section class="meta">
-        <h2 class="title">
-            <a href="/2018/12/05/网络编程之Socket/">
-                
-                    网络编程Socket
-                
-            </a>
-        </h2>
-        <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-12-05
-        </time>
-        
-    
-    <div class="cats">
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/网络编程/">网络编程</a>
-    </div>
-
-
-    </section>
-
-    <section class="article typo">
-        <a id="more"></a>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/Socket/"><i class="fas fa-tag fa-fw"></i>&nbsp;Socket</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-        </div>
-    
-        <div class="post-wrapper">
-            <article class="post reveal ">
-    <section class="meta">
-        <h2 class="title">
-            <a href="/2018/12/03/Nginx部署/">
-                
-                    WEB服务器之Nginx
-                
-            </a>
-        </h2>
-        <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-12-03
-        </time>
-        
-    
-    <div class="cats">
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/Nginx/">Nginx</a>
-    </div>
-
-
-    </section>
-
-    <section class="article typo">
-        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1543846943979&amp;di=637072e9dc9da57e53561cf9642c1612&amp;imgtype=0&amp;src=http%3A%2F%2Fp2.so.qhimgs1.com%2Ft0179b2681575b65e42.jpg" alt="Nginx"></p>
-<p>在传统的Web项目中，并发量小，用户使用的少。 当然，为了解决并发，可以使用负载均衡 ，也就是多加几个服务器。Nginx同Apache一样都是一种WEB服务器。 基于REST架构风格，以统一资源描述符(Uniform Resources Identifier)URI或者统一资源定位符(Uniform Resources Locator)URL作为沟通依据，通过HTTP协议提供各种网络服务。所以什么情况下该使用Nginx呢？或者说Nginx带来的好处有哪些？</p>
-        
-            <div class="readmore">
-                <a href="/2018/12/03/Nginx部署/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/Nginx/"><i class="fas fa-tag fa-fw"></i>&nbsp;Nginx</a>
-                
-                    <a href="/tags/uWSGI/"><i class="fas fa-tag fa-fw"></i>&nbsp;uWSGI</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-        </div>
-    
-</section>
-
-
-    <br>
-    <div class="prev-next">
-        <div class="prev-next">
+        <section class="meta">
+            <time class="time" itemprop="dateUpdated" datetime="2018-12-05T05:15:53+08:00" content="2018-12-05">
+                <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
+                本文最后更新于：2018-12-05
+            </time>
             
-            <p class="current">
-                1 / 3
-            </p>
+                
+                <div class="tags">
+                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                    <a class="tag" href="/tags/IO模型/">IO模型</a>
+                </div>
             
-                <a class="next" rel="next" href="/page/2/">
-                    <section class="post next">
-                        &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </section>
+
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
+                            <h4>
+                                <a href="/2018/12/05/并发编程之协程/" rel="prev" title="并发编程之多进程">
+                                  
+                                      并发编程之多进程
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                                    <a class="tag" href="/tags/协程/">协程</a>
+                                </h6>
+                            
+                        </span>
                     </section>
-                </a>
-            
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2018/12/05/并发编程之多线程/" rel="prev" title="并发编程之多进程">
+                                    
+                                        并发编程之多进程
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                                    <a class="tag" href="/tags/多线程/">多线程</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
 
-        </div>
+    </section>
+
+</article>
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+    <article class="post white-box comments">
+        <section class="article typo">
+
+            
+                
+
+    <div class="recommended_posts">
+        <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
+        <ul>
+            
+                <li><a href="http://yoursite.com/2018/12/05/并发编程之协程/">并发编程之多进程</a></li>
+            
+                <li><a href="http://yoursite.com/2018/12/05/并发编程之多线程/">并发编程之多进程</a></li>
+            
+                <li><a href="http://yoursite.com/2018/12/05/网络编程之Socket/">网络编程Socket</a></li>
+            
+                <li><a href="http://yoursite.com/2018/12/03/Nginx部署/">WEB服务器之Nginx</a></li>
+            
+                <li><a href="http://yoursite.com/2018/12/03/MySQL/">MySQL基础知识</a></li>
+            
+        </ul>
     </div>
 
+
+            
+
+            
+
+                
+
+                
+                    <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;LiveRe评论</h4>
+                    <section id="comments">
+                        <div id="lv-container" data-id="city" data-uid="MTAyMC80MTQxNi8xNzk2Mw==">
+                            <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+                        </div>
+                    </section>
+                
+
+                
+            
+
+        </section>
+    </article>
+
+
+<script>
+    window.subData = {
+        title: '并发编程之多进程',
+        tools: true
+    }
+</script>
 
 
         </div>
@@ -589,6 +511,21 @@
 <script src="/js/search.js"></script>
 <script src="/js/app.js"></script>
 
+
+    
+    
+        <script type="text/javascript">
+           (function(d, s) {
+               var j, e = d.getElementsByTagName(s)[0];
+               if (typeof LivereTower === 'function') { return; }
+               j = d.createElement(s);
+               j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+               j.async = true;
+               e.parentNode.insertBefore(j, e);
+           })(document, 'script');
+        </script>
+    
+    
 
 
 
