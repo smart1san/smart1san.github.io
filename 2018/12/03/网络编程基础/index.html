@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>设计模式 | VIP</title>
+  <title>网络编程基础 | VIP</title>
   
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -158,10 +158,10 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            <article id="post-设计模式" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
+            <article id="post-网络编程基础" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
     <section class="meta">
         
-            <h1 class="title">设计模式</h1>
+            <h1 class="title">网络编程基础</h1>
         
         <time class="time">
             <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
@@ -177,7 +177,7 @@
     
     <div class="cats">
         <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/设计模式/">设计模式</a>
+        <a class="categories" href="/categories/网络编程/">网络编程</a>
     </div>
 
 
@@ -186,134 +186,135 @@
     <section class="article typo">
 
         <div class="article-entry" itemprop="articleBody">
-            <p>设计模式是面对各种问题进行提炼和抽象而形成的解决方案。这些设计方案是前人不断试验，考虑了封装性、复用性、效率、可修改、可移植等各种因素的高度总结。模式不是代码，而是某类问题的通用设计解决方案。</p>
+            <p><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=760021011,2575433862&amp;fm=26&amp;gp=0.jpg" alt="OSI七层协议"></p>
+<p>自从互联网诞生以来，现在市场上所有的程序都是基本网络程序，单击版的应用程序几乎不见了。计算机网络就是负责将各个计算机连接到一起，让网络中的计算机可以互相通信。网络编程就是如何在各个程序中实现两台计算机的通信。</p>
 <a id="more"></a>
-<h1 id="一、设计模式与架构、框架的关系"><a href="#一、设计模式与架构、框架的关系" class="headerlink" title="一、设计模式与架构、框架的关系"></a>一、设计模式与<em>架构</em>、<em>框架</em>的关系</h1><ul>
-<li><p>1.软件框架与设计模式的关系</p>
-<blockquote>
-<p>软件框架随着软件工程的发展而出现，所谓的软件框架，是提取了特定领域的软件的共性部分所形成的软件体系，它并不是一个成熟的软件，而更像是一个“半成品”，程序员在框架之上，可以很方便地某些特定领域实现又快又可靠的二次开发。<br>设计模式和软件框架在软件设计中是两个不同的研究领域：A、设计模式如前边的定义所讲，它指的是针对一类问题的解决方法，一个设计模式可应用于不同的框架和被不同的语言所实现；而框架则是一个应用的体系结构，是一种或多种设计模式和代码的混合体；B、设计模式相较于框架更容易移植，并且可以用各种语言实现，而软件框架则受限于领域大环境。虽然设计模式和软件框架有很多不同，但在某些方面他们二者是统一的，即重视软件复用，提高开发效率。</p>
+<h1 id="一、C-S架构和B-S架构"><a href="#一、C-S架构和B-S架构" class="headerlink" title="一、C/S架构和B/S架构"></a>一、C/S架构和B/S架构</h1><h2 id="1-B-S架构"><a href="#1-B-S架构" class="headerlink" title="1.B/S架构"></a>1.B/S架构</h2><blockquote>
+<p>  实际上<code>B/S</code>架构也是<code>C/S</code>架构的一种 </p>
 </blockquote>
-</li>
-<li><p>2.软件架构与设计模式的关系</p>
-<blockquote>
-<p>软件架构是个比较大的概念，架构要考虑软件的整体结构、层次划分以及不同部分间的协作和交互等，架构的着眼点偏整体。相比之下，框架和设计模式的范围则具体很多，框架着眼于领域内的解决方法，而设计模式则针对一类问题的解决方案和设计思路。<br>总体来说，软件架构可以由不同的框架和不同的设计模式，再加上特定的构件组合来实现；框架可以根据设计模式结合特定编程语言和环境来实现。设计模式就是解决单一问题的设计思路和解决方法。</p>
-</blockquote>
-</li>
+<h2 id="2-C-S架构"><a href="#2-C-S架构" class="headerlink" title="2.C/S架构"></a>2.C/S架构</h2><ul>
+<li>硬件硬件C/S架构(如打印机)</li>
+<li>软件C/S架构</li>
 </ul>
-<h1 id="二、设计模式的意义"><a href="#二、设计模式的意义" class="headerlink" title="二、设计模式的意义"></a>二、设计模式的意义</h1><blockquote>
-<p>由于公司人事的变动，代码非常有可能会被移交，即代码的编写者和维护者很有可能会是不同的人。那么代码的可读性就显得非常重要了。由于高级语言的出现，让机器读懂你的意图已经不是最主要的“矛盾”，而让人读懂你的意图才是最重要。按照设计模式编写的代码，其可读性也会大大提升，利于团队项目的继承和扩展</p>
-</blockquote>
-<h1 id="三、设计模式的种类"><a href="#三、设计模式的种类" class="headerlink" title="三、设计模式的种类"></a>三、设计模式的种类</h1><ul>
-<li><p>1.创建类设计模式（5种）</p>
 <blockquote>
-<p>单例模式、工厂模式（简单工厂模式、抽象工厂模式）、建造者模式、原型模式</p>
+<p>  互联网中到处是C/S架构，如你的浏览器就是客户端，你的目标网站就是服务端 </p>
 </blockquote>
-</li>
-<li><p>2.结构类设计模式（7种）</p>
-<blockquote>
-<p>代理模式、装饰器模式、适配器模式、门面模式、组合模式、享元模式、桥梁模式</p>
-</blockquote>
-</li>
-<li><p>3.行为类设计模式（11种）</p>
-<blockquote>
-<p>策略模式、责任链模式、命令模式、中介者模式、模板模式、迭代器模式、访问者模式、观察者模式、解释器模式、备忘录模式、状态模式</p>
-</blockquote>
-</li>
-</ul>
-<h1 id="四、设计模式遵循的六大原则"><a href="#四、设计模式遵循的六大原则" class="headerlink" title="四、设计模式遵循的六大原则"></a>四、设计模式遵循的六大原则</h1><blockquote>
-<p>设计模式与设计原则，基本符合规则与原则的关系，设计模式是一个个具体问题的解决方案，设计原则则反映了这些设计模式的指导思想；同时，设计原则可衍生出的设计模式也不仅限于上述介绍到了23种设计模式，任何一种针对特定业务场景中的解决方法，虽然找不到对应的设计模式与之匹配，但若符合设计原则，也可以认为是一种全新的设计模式。从这个意义上来说，设计模式是程序设计方法的形，而设计原则是程序设计方法的神。</p>
+<h1 id="二、网络通信原理"><a href="#二、网络通信原理" class="headerlink" title="二、网络通信原理"></a>二、网络通信原理</h1><h2 id="1-互联网的本质就是一系列的网络协议"><a href="#1-互联网的本质就是一系列的网络协议" class="headerlink" title="1.互联网的本质就是一系列的网络协议"></a>1.互联网的本质就是一系列的网络协议</h2><p>若将计算机比作动物，互联网协议就可以视成计算机界的英语。只要计算机都学会了并遵守互联网协议（Internet Protocol Suite），则所有的计算机都可以按照统一的标准来实现数据的传递任务了。</p>
+<h2 id="2-OSI七层协议"><a href="#2-OSI七层协议" class="headerlink" title="2.OSI七层协议"></a>2.OSI七层协议</h2><p>互联网协议按照功能不同分为<code>OSI</code>七层或<code>TCP/IP</code>五层</p>
+<h2 id="3-TCP-IP五层模型讲解"><a href="#3-TCP-IP五层模型讲解" class="headerlink" title="3.TCP/IP五层模型讲解"></a>3.TCP/IP五层模型讲解</h2><blockquote>
+<p>  将应用层，表示层，会话层并作应用层，从<code>TCP/IP</code>五层协议的角度来阐述每层的由来与功能，只要我们搞清楚了每层的主要协议，就可以理解整个互联网通信的过程及原理。首先，在用户感知到的范围是最上面一层应用层，自上而下每层都依赖于下一层，所以我们就从最下一层开始切入，比较好理解每层都运行特定的协议，越往上越靠近用户，越往下越靠近硬件。</p>
 </blockquote>
 <ul>
-<li><p>1.开闭原则（Open Close Principle）</p>
-<blockquote>
-<p>开闭原则是非常基础的一个原则，也有人把开闭原则称为“原则的原则”。前面讲到过，模块分原子模块，低层模块，高层模块，业务层可以认为是最高层次的模块。对扩展开放，意味着模块的行为是可以扩展的，当高层模块需求改变时，我们可以对低层模块进行扩展，使其具有满足高层模块的新功能；对修改关闭，即对低层模块行为进行扩展时，不必改动模块的源代码。最理想的情况是，业务变动时，仅修改业务代码，不修改依赖的模块（类、函数等）代码，通过扩展依赖的模块单元来实现业务变化。</p>
-</blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">假设一个原始基类水果类，苹果类是它的派生类，苹果中包含水果的各种属性，如形状、颜色等；另有两个类，农民类和花园类，最高层次（业务层次）为农民在花园种苹果。如果此时，农民决定不种苹果了，改种梨，符合OCP原则的设计应该为基于水果类构建一个新的类，即梨类（对扩展开放），而并不应该去修改苹果类，使它成为一个梨类（对修改关闭）。修改应仅在最高层，即业务层中进行。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2.里氏代换原则（Liskov Substitution Principle）</p>
-<blockquote>
-<p>面向对象设计的最为基本原则之一。 里氏替换原则的含义为：任何基类可以出现的地方，子类一定可以出现。 LSP是继承复用的基石，只有当子类可以替换掉基类，软件单位的功能不受到影响时，基类才能真正被复用，子类也能够在基类的基础上增加新的行为。</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对于一个鸟类，可以衍生出麻雀、喜鹊、布谷等子类，这些子类都可继承鸟类的鸣叫、飞行、吃食等接口。而对于一个鸡类，虽然它在生物学上属于鸟类，但它不会飞，那么符合LSP设计原则的情况下，鸡就不应该是鸟的一个子类：在鸟类调用飞行接口的地方，鸡类并不能出现。如果鸡类要使用鸟类的接口，应该使用关联关系，而不是继承关系。</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
+<li>物理层</li>
 </ul>
+<p>物理层功能：主要是基于电器特性发送高低电压(电信号)，高电压对应数字1，低电压对应数字0 </p>
 <ul>
-<li><p>3.依赖倒转原则（Dependence Inversion Principle）</p>
+<li>数据链路层</li>
+</ul>
+<p>数据链路层出现的原因：单纯的电信号0和1没有任何意义，必须规定电信号多少位一组，每组什么意思</p>
+<p>数据链路层的功能：定义了电信号的分组方式</p>
 <blockquote>
-<p>高层模块不应该依赖于低层模块，两者都应该依赖其抽象。抽象不应该依赖于细节，细节应该依赖于抽象。我们将每个不可细分的逻辑叫作原子逻辑，原子逻辑组装，形成低层模块，低层模块组装形成高层模块。依赖倒置原则的含义为，高层模块和低层模块都应该由各自的抽象模块派生而来，同时接口设计应该依赖于抽象，而非具体模块。</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">司机与汽车是依赖的关系，司机可以有实习司机类、老司机类等派生；汽车可以有轿车、SUV、卡车等派生类。如果司机中设计一个接口drive，汽车是其参数，符合DIP设计原则的参数，应该是在基类司机类中，将基类汽车类作为参数，而司机的派生类中，drive的参数同样应该为基类汽车类，而不应该是汽车类的任一个派生类。如果规定实习司机只能开轿车等业务逻辑，应该在其接口中进行判断，而不应该将参数替换成子类轿车。</span><br></pre></td></tr></table></figure>
+<p>  <strong>以太网协议：</strong></p>
+<ul>
+<li>一组电信号构成一个数据包，叫做 “帧”</li>
+<li>每一数据帧分成：报头<code>head</code>和数据<code>data</code>两部分</li>
+</ul>
 </blockquote>
-</li>
-<li><p>4.接口隔离原则（Interface Segregation Principle）</p>
 <blockquote>
-<p>类间的依赖关系不应该建立一个大的接口，而应该建立其最小的接口，即客户端不应该依赖那些它不需要的接口。这里的接口的概念是非常重要的。从逻辑上来讲，这里的接口可以指一些属性和方法的集合；从业务上来讲，接口就可以指特定业务下的接口（如函数，URL调用等）。接口应该尽量小，同时仅留给客户端必要的接口，弃用没有必要的接口。</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果要根据具体的数据，生成饼图、直方图、表格，这个类该如何设计？如果将生成饼图、直方图、表格等“接口”（这里的接口就是“操作”的集合的概念），写在一个类中，是不符合接口隔离原则的。符合ISP原则的设计应该是设计三个类，每个类分别实现饼图、直方图、表格的绘制。</span><br></pre></td></tr></table></figure>
+<p>  <strong>mac地址：</strong> <code>head</code>中包含的源和目标地址由来：<code>ethernet</code>规定接入<code>internet</code>的设备都必须具备网卡，发送端和接收端的地址便是指网卡的地址，即<code>mac</code>地址。每块网卡出厂时都被烧制上一个世界唯一的<code>mac</code>地址，长度为48位2进制，通常由12位16进制数表示（前六位是厂商编号，后六位是流水线号） </p>
 </blockquote>
-</li>
-<li><p>5.迪米特法则（最少知识原则）（Demeter Principle）（Least Knowledge Principle）</p>
 <blockquote>
-<p>一个实体应当尽量少的与其他实体之间发生相互作用，使得系统功能模块相对独立。</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个公司有多个部门，每个部门有多个员工，如果公司CEO要下发通知给每个员工，是调用接口直接通知所有员工么？其实不然，CEO只需和它的“朋友”类部门Leader交流就好，部门Leader再下发通知信息即可。而CEO类不需要与员工进行“交流”。</span><br></pre></td></tr></table></figure>
+<p>  <strong>广播：</strong> <code>ethernet</code>采用最原始的方式，广播的方式进行通信，即计算机通信基本靠吼 </p>
 </blockquote>
-</li>
-<li><p>6.合成复用原则（Composite Reuse Principle）</p>
+<ul>
+<li>网络层</li>
+</ul>
+<p>网络层出现的原因：有了<code>ethernet、mac</code>地址、广播的发送方式之后，世界上的所有计算机就可以彼此通信了，但是问题是世界范围的互联网是由一个个彼此互相隔离的局域网组成的，如果所有的通信都采用以太网的广播方式，那么一台机器发送的包全世界都会收到，这个时候就不仅仅是效率低的问题了，这将是计算机界的一场巨大灾难。</p>
 <blockquote>
-<p>尽量使用合成/聚合的方式，而不是使用继承。继承实际上破坏了类的封装性，超类的方法可能会被子类修改。</p>
+<p>  <strong>IP协议：</strong> </p>
+<ul>
+<li>规定网络地址的协议叫IP协议，它定义的地址称之为IP地址，广泛采用的v4版本即ipv4，它规定网络地址由32位2进制表示</li>
+<li>范围0.0.0.0-255.255.255.255</li>
+<li>一个IP地址通常写成四段十进制数，例：192.168.0.0</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>  <strong>IP地址分成两部分：</strong> </p>
+<ul>
+<li>网络部分：标识子网</li>
+<li>主机部分：标识主机</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>  <strong>子网掩码：</strong></p>
+<p>  表示子网络特征的一个参数。它在形式上等同于IP地址，也是一个32位二进制数字，它的网络部分全部为1，主机部分全部为0。比如，IP地址172.16.10.1，如果已知网络部分是前24位，主机部分是后8位，那么子网络掩码就是11111111.11111111.11111111.00000000，写成十进制就是255.255.255.0。 </p>
+<p>  知道”子网掩码”，我们就能判断，任意两个IP地址是否处在同一个子网络。方法是将两个IP地址与子网掩码分别进行AND运算（两个数位都为1，运算结果为1，否则为0），然后比较结果是否相同，如果是的话，就表明它们在同一个子网络中，否则就不是。 </p>
+</blockquote>
+<blockquote>
+<p>  <strong>IP数据包：</strong> IP数据包也分为head和data部分，无须为IP包定义单独的栏位，直接放入以太网包的data部分 </p>
+</blockquote>
+<blockquote>
+<p>  <strong>ARP协议：</strong> 计算机通信基本靠吼，即广播的方式，所有上层的包到最后都要封装上以太网头，然后通过以太网协议发送，在谈及以太网协议时候，我们了解到通信是基于mac的广播方式实现，计算机在发包时，获取自身的mac是容易的，如何获取目标主机的mac，就需要通过ARP协议。</p>
+<ul>
+<li>ARP协议功能：广播的方式发送数据包，获取目标主机的mac地址 </li>
+<li>这个包会以广播的方式在发送端所处的自网内传输，所有主机接收后拆开包，发现目标IP为自己的，就响应，返回自己的mac </li>
+</ul>
+</blockquote>
+<h2 id="4-传输层"><a href="#4-传输层" class="headerlink" title="4.传输层"></a>4.传输层</h2><p>传输层的由来：网络层的IP区分子网，以太网层的mac找到主机，然后大家使用的都是应用程序，但是电脑上可能同时开启QQ，爱奇艺，等多个应用程序，我们通过IP和mac找到了一台特定的主机，如何标识这台主机上的应用程序，答案就是端口，端口即应用程序与网卡关联的编号。</p>
+<p>传输层功能：建立端口到端口的通信。</p>
+<blockquote>
+<p> <strong>TCP协议：</strong> 可靠传输，TCP数据包没有长度限制，理论上可以无限长，但是为了保证网络的效率，通常TCP数据包的长度不会超过IP数据包的长度，以确保单个TCP数据包不必再分割。 </p>
+</blockquote>
+<blockquote>
+<p>  <strong>UDP协议：</strong> 不可靠传输，”报头”部分一共只有8个字节，总长度不超过65,535字节，正好放进一个IP数据包。 </p>
+</blockquote>
+<h2 id="5-应用层"><a href="#5-应用层" class="headerlink" title="5.应用层"></a>5.应用层</h2><p>应用层由来：用户使用的都是应用程序，均工作于应用层，互联网是开发的，大家都可以开发自己的应用程序，数据多种多样，必须规定好数据的组织形式 </p>
+<p>应用层功能：规定应用程序的数据格式。</p>
+<h2 id="6-Socket层"><a href="#6-Socket层" class="headerlink" title="6.Socket层"></a>6.Socket层</h2><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1543962645480&amp;di=cd503454476b6cab27517674fab44428&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3233222235%2C290543934%26fm%3D214%26gp%3D0.jpg" alt="Socket"></p>
+<p>两个进程如果需要进行通讯最基本的一个前提能能够唯一的标示一个进程，在本地进程通讯中我们可以使用PID来唯一标示一个进程，但PID只在本地唯一，网络中的两个进程PID冲突几率很大，这时候我们需要另辟它径了，我们知道IP层的ip地址可以唯一标示主机，而TCP层协议和端口号可以唯一标示主机的一个进程，这样我们可以利用ip地址＋协议＋端口号唯一标示网络中的一个进程。 </p>
+<p>能够唯一标示网络中的进程后，它们就可以利用socket进行通信了，什么是socket呢？我们经常把socket翻译为套接字，socket是在应用层和传输层之间的一个抽象层，它把TCP/IP层复杂的操作抽象为几个简单的接口供应用层调用已实现进程在网络中通信。 </p>
+<h1 id="三、网络通信的实现"><a href="#三、网络通信的实现" class="headerlink" title="三、网络通信的实现"></a>三、网络通信的实现</h1><blockquote>
+<p>  网络通信实现的四要素</p>
+<ul>
+<li>本机的IP地址</li>
+<li>子网掩码</li>
+<li>网关的IP地址</li>
+<li>DNS的IP地址 </li>
+</ul>
+</blockquote>
+<p><strong>四要素的获取方式：</strong></p>
+<ul>
+<li><p>静态获取：即手动获取</p>
+</li>
+<li><p>动态获取</p>
+<blockquote>
+<p>（1）最前面的”以太网标头”，设置发出方（本机）的MAC地址和接收方（DHCP服务器）的MAC地址。前者就是本机网卡的MAC地址，后者这时不知道，就填入一个广播地址：FF-FF-FF-FF-FF-FF。 </p>
+</blockquote>
+<blockquote>
+<p>（2）后面的”IP标头”，设置发出方的IP地址和接收方的IP地址。这时，对于这两者，本机都不知道。于是，发出方的IP地址就设为0.0.0.0，接收方的IP地址设为255.255.255.255。 </p>
+</blockquote>
+<blockquote>
+<p>（3）最后的”UDP标头”，设置发出方的端口和接收方的端口。这一部分是DHCP协议规定好的，发出方是68端口，接收方是67端口。 </p>
 </blockquote>
 </li>
 </ul>
-<h1 id="五、设计模式的优点"><a href="#五、设计模式的优点" class="headerlink" title="五、设计模式的优点"></a>五、设计模式的优点</h1><blockquote>
-<p>设计原则是设计模式的提炼，因而设计原则的好处与设计模式是一致的，即：代码易于理解；更适于团体合作；适应需求变化等。</p>
-</blockquote>
-<h1 id="六、设计模式与设计原则"><a href="#六、设计模式与设计原则" class="headerlink" title="六、设计模式与设计原则"></a>六、设计模式与设计原则</h1><ul>
-<li><p>1.创建类设计模式</p>
-<blockquote>
-<p>工厂模式：工厂方法模式是一种解耦结构，工厂类只需要知道抽象产品类，符合最少知识原则（迪米特法则）；同时符合依赖倒置原则和里氏替换原则；</p>
-</blockquote>
-<blockquote>
-<p>抽象工厂模式：抽象工厂模式具有工厂模式的优点，但同时，如果产品族要扩展，工厂类也要修改，违反了开闭原则；</p>
-</blockquote>
-<blockquote>
-<p>模板模式：优秀的扩展能力符合开闭原则。</p>
-</blockquote>
-</li>
-<li><p>2.结构类设计模式</p>
-<blockquote>
-<p>代理模式：代理模式在业务逻辑中将对主体对象的操作进行封装，合适的应用会符合开闭原则和单一职责原则；事实上，几乎带有解耦作用的结构类设计模式都多少符合些开闭原则；</p>
-</blockquote>
-<blockquote>
-<p>门面模式：门面模式不符合开闭原则，有时不符合单一职责原则，如若不注意，也会触碰接口隔离原则；</p>
-</blockquote>
-<blockquote>
-<p>组合模式：符合开闭原则，但由于一般在拼接树时使用实现类，故不符合依赖倒置原则；</p>
-</blockquote>
-<blockquote>
-<p>桥梁模式：桥梁模式堪称依赖倒置原则的典范，同时也符合开闭原则。</p>
-</blockquote>
-</li>
-<li><p>3.行为类设计模式</p>
-<blockquote>
-<p>策略模式：符合开闭原则，但高层模块调用时，不符合迪米特法则。行为类设计模式多少会符合些单一职责原则，典型的如观察者模式、中介者模式、访问者模式等；</p>
-</blockquote>
-<blockquote>
-<p>责任链模式：符合单一职责原则和迪米特法则；</p>
-</blockquote>
-<blockquote>
-<p>命令模式：符合开闭原则。</p>
-</blockquote>
-<blockquote>
-<p>在不同的业务逻辑中，不同的设计模式也会显示出不同的设计原则特点，从这个意义上来说，设计模式是设计原则的体现，但体现不是固定的，是根据业务而有所不同的。</p>
-</blockquote>
-</li>
-</ul>
+<p>数据包构造完成后，就可以发出了。以太网是广播发送，同一个子网络的每台计算机都收到了这个包。因为接收方的MAC地址是FF-FF-FF-FF-FF-FF，看不出是发给谁的，所以每台收到这个包的计算机，还必须分析这个包的IP地址，才能确定是不是发给自己的。当看到发出方IP地址是0.0.0.0，接收方是255.255.255.255，于是DHCP服务器知道”这个包是发给我的”，而其他计算机就可以丢弃这个包。 </p>
+<p>接下来，DHCP服务器读出这个包的数据内容，分配好IP地址，发送回去一个”DHCP响应”数据包。这个响应包的结构也是类似的，以太网标头的MAC地址是双方的网卡地址，IP标头的IP地址是DHCP服务器的IP地址（发出方）和255.255.255.255（接收方），UDP标头的端口是67（发出方）和68（接收方），分配给请求端的IP地址和本网络的具体参数则包含在Data部分。</p>
+<p>新加入的计算机收到这个响应包，于是就知道了自己的IP地址、子网掩码、网关地址、DNS服务器等等参数</p>
 
         </div>
 
         <section class="meta">
-            <time class="time" itemprop="dateUpdated" datetime="2018-12-03T04:25:42+08:00" content="2018-12-03">
+            <time class="time" itemprop="dateUpdated" datetime="2018-12-05T03:50:55+08:00" content="2018-12-05">
                 <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
-                本文最后更新于：2018-12-03
+                本文最后更新于：2018-12-05
             </time>
+            
+                
+                <div class="tags">
+                    <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
+                    <a class="tag" href="/tags/Socket/">Socket</a>, <a class="tag" href="/tags/TCP/">TCP</a>, <a class="tag" href="/tags/UDP/">UDP</a>
+                </div>
             
         </section>
 
@@ -324,9 +325,9 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
                             <h4>
-                                <a href="/2018/12/03/Python实现23种设计模式/" rel="prev" title="Python实现23种设计模式">
+                                <a href="/2018/12/03/网络编程 IO 模型/" rel="prev" title="网络编程 IO 模型">
                                   
-                                      Python实现23种设计模式
+                                      网络编程 IO 模型
                                   
                                 </a>
                             </h4>
@@ -334,7 +335,7 @@
                                 
                                 <h6 class="tags">
                                     <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
-                                    <a class="tag" href="/tags/Python/">Python</a>
+                                    <a class="tag" href="/tags/IO模型/">IO模型</a>
                                 </h6>
                             
                         </span>
@@ -345,9 +346,9 @@
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2018/12/03/Git/" rel="prev" title="Git的使用">
+                                <a href="/2018/12/03/网络编程HTTP协议/" rel="prev" title="网络编程HTTP协议">
                                     
-                                        Git的使用
+                                        网络编程HTTP协议
                                     
                                 </a>
                             </h4>
@@ -355,7 +356,7 @@
                                 
                                 <h6 class="tags">
                                     <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
-                                    <a class="tag" href="/tags/Git/">Git</a>
+                                    <a class="tag" href="/tags/HTTP/">HTTP</a>
                                 </h6>
                             
                         </span>
@@ -382,15 +383,15 @@
         <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
         <ul>
             
-                <li><a href="http://yoursite.com/2018/12/03/网络编程基础/">网络编程基础</a></li>
+                <li><a href="http://yoursite.com/2018/12/03/MySQL/">MySQL基础知识</a></li>
+            
+                <li><a href="http://yoursite.com/2018/12/03/网络编程 IO 模型/">网络编程 IO 模型</a></li>
             
                 <li><a href="http://yoursite.com/2018/12/03/网络编程HTTP协议/">网络编程HTTP协议</a></li>
             
                 <li><a href="http://yoursite.com/2018/12/03/Python实现23种设计模式/">Python实现23种设计模式</a></li>
             
-                <li><a href="http://yoursite.com/2018/12/03/Git/">Git的使用</a></li>
-            
-                <li><a href="http://yoursite.com/2018/12/03/Django/">Django基础知识</a></li>
+                <li><a href="http://yoursite.com/2018/12/03/设计模式/">设计模式</a></li>
             
         </ul>
     </div>
@@ -420,7 +421,7 @@
 
 <script>
     window.subData = {
-        title: '设计模式',
+        title: '网络编程基础',
         tools: true
     }
 </script>
@@ -529,7 +530,7 @@
             <div class="wrapper"><a class="s-toc rightBtn" title="固定到顶部" target="_blank" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
         </header>
         <div class="content pure">
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、设计模式与架构、框架的关系"><span class="toc-text">一、设计模式与架构、框架的关系</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、设计模式的意义"><span class="toc-text">二、设计模式的意义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、设计模式的种类"><span class="toc-text">三、设计模式的种类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、设计模式遵循的六大原则"><span class="toc-text">四、设计模式遵循的六大原则</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、设计模式的优点"><span class="toc-text">五、设计模式的优点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、设计模式与设计原则"><span class="toc-text">六、设计模式与设计原则</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、C-S架构和B-S架构"><span class="toc-text">一、C/S架构和B/S架构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-B-S架构"><span class="toc-text">1.B/S架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-C-S架构"><span class="toc-text">2.C/S架构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、网络通信原理"><span class="toc-text">二、网络通信原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-互联网的本质就是一系列的网络协议"><span class="toc-text">1.互联网的本质就是一系列的网络协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-OSI七层协议"><span class="toc-text">2.OSI七层协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-TCP-IP五层模型讲解"><span class="toc-text">3.TCP/IP五层模型讲解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-传输层"><span class="toc-text">4.传输层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-应用层"><span class="toc-text">5.应用层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Socket层"><span class="toc-text">6.Socket层</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、网络通信的实现"><span class="toc-text">三、网络通信的实现</span></a></li></ol>
         </div>
     </section>
 

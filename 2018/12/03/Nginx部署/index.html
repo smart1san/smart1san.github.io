@@ -230,8 +230,8 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">upstream www proxy test <span class="number">80</span> &#123;</span><br><span class="line">    server <span class="number">192.168</span><span class="number">.10</span><span class="number">.10</span>:<span class="number">80</span>;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  www.mysite.com;</span><br><span class="line">    </span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass http://www_proxy_test_80;</span><br><span class="line">        proxy_set_header Host $host;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_set_header X-Forwarded-Proto https;</span><br><span class="line">        proxy_redirect off;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="3-Nginx配置"><a href="#3-Nginx配置" class="headerlink" title="3.Nginx配置"></a>3.Nginx配置</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">worker_processes <span class="number">1</span>;            <span class="comment">#全局有效</span></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections <span class="number">1024</span>;    <span class="comment">#events部分有效</span></span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">    include    mime.types;             <span class="comment">#http部分有效</span></span><br><span class="line">    default_type    applicaiotion/octet-stream;</span><br><span class="line">    sendfile    on;</span><br><span class="line">    keepalive_timeout    <span class="number">65</span>;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen    <span class="number">80</span>;</span><br><span class="line">        server_name    localhost;        <span class="comment">#http的server部分有效</span></span><br><span class="line">        location / &#123;                        <span class="comment">#http/server的location部分有效</span></span><br><span class="line">            root    html;</span><br><span class="line">            index    index.html    index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">        error_page <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span> /<span class="number">50</span>x.html;</span><br><span class="line">        location = /<span class="number">50</span>x.html &#123;</span><br><span class="line">            root    html;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="三、Nginx、uwsgi、Django"><a href="#三、Nginx、uwsgi、Django" class="headerlink" title="三、Nginx、uwsgi、Django"></a>三、Nginx、uwsgi、Django</h1><h2 id="1-Nginx安装"><a href="#1-Nginx安装" class="headerlink" title="1.Nginx安装"></a>1.Nginx安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install nginx  <span class="comment">#安装</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> /etc/init.d/nginx start  <span class="comment">#启动</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> /etc/init.d/nginx stop  <span class="comment">#关闭</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> /etc/init.d/nginx restart  <span class="comment">#重启</span></span></span><br></pre></td></tr></table></figure>
-<h2 id="2-安装-uwsgi"><a href="#2-安装-uwsgi" class="headerlink" title="2.安装 uwsgi"></a>2.安装 uwsgi</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python3 -m pip install uwsgi   <span class="comment"># 前提是已安装python并设置好环境变量</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="三、Nginx、uwsgi、Django"><a href="#三、Nginx、uwsgi、Django" class="headerlink" title="三、Nginx、uwsgi、Django"></a>三、Nginx、uwsgi、Django</h1><h2 id="1-Nginx安装"><a href="#1-Nginx安装" class="headerlink" title="1.Nginx安装"></a>1.Nginx安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo apt-get install nginx  #安装</span><br><span class="line"><span class="meta">$</span> /etc/init.d/nginx start  #启动</span><br><span class="line"><span class="meta">$</span> /etc/init.d/nginx stop  #关闭</span><br><span class="line"><span class="meta">$</span> /etc/init.d/nginx restart  #重启</span><br></pre></td></tr></table></figure>
+<h2 id="2-安装-uwsgi"><a href="#2-安装-uwsgi" class="headerlink" title="2.安装 uwsgi"></a>2.安装 uwsgi</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> python3 -m pip install uwsgi   # 前提是已安装python并设置好环境变量</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>  测试uwsgi，创建index.py文件</p>
 </blockquote>
@@ -239,11 +239,11 @@
 <blockquote>
 <p>  通过uwsgi运行该文件</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> uwsgi --http :8001 --wsgi-file index.py</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> uwsgi --http :8001 --wsgi-file index.py</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>  配置Django与uwsgi连接 ,Django项目的位置假设是 /home/mysite/</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> uwsgi --http :8001 --<span class="built_in">chdir</span> /home/mysite/ --wsgi-file mysite/wsgi.py --master --processes 4 --threads 2 --stats 127.0.0.1:9191</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> uwsgi --http :8001 --chdir /home/mysite/ --wsgi-file mysite/wsgi.py --master --processes 4 --threads 2 --stats 127.0.0.1:9191</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -306,7 +306,7 @@
 <ul>
 <li>2.切换到<code>mysite</code>项目目录下，通过<code>uwsgi</code>命令读取<code>mysite_uwsgi.ini</code>文件启动项目 </li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /home/mysite/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> uwsgi --ini mysite_uwsgi.ini</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd /home/mysite/</span><br><span class="line"><span class="meta">$</span> uwsgi --ini mysite_uwsgi.ini</span><br></pre></td></tr></table></figure>
 <ul>
 <li>3.修改<code>nginx.conf</code>配置文件。打开<code>/etc/nginx/nginx.conf</code>文件</li>
 </ul>
@@ -485,13 +485,13 @@
             
                 <li><a href="http://yoursite.com/2018/12/03/MySQL/">MySQL基础知识</a></li>
             
+                <li><a href="http://yoursite.com/2018/12/03/网络编程 IO 模型/">网络编程 IO 模型</a></li>
+            
+                <li><a href="http://yoursite.com/2018/12/03/网络编程基础/">网络编程基础</a></li>
+            
+                <li><a href="http://yoursite.com/2018/12/03/网络编程HTTP协议/">网络编程HTTP协议</a></li>
+            
                 <li><a href="http://yoursite.com/2018/12/03/Python实现23种设计模式/">Python实现23种设计模式</a></li>
-            
-                <li><a href="http://yoursite.com/2018/12/03/设计模式/">设计模式</a></li>
-            
-                <li><a href="http://yoursite.com/2018/12/03/Git/">Git的使用</a></li>
-            
-                <li><a href="http://yoursite.com/2018/12/03/Django/">Django基础知识</a></li>
             
         </ul>
     </div>
@@ -599,6 +599,8 @@
                 
                     <li><a class="flat-box" href="/categories/Python/"><div class="name">Python</div><div class="badge">1</div></a></li>
                 
+                    <li><a class="flat-box" href="/categories/网络编程/"><div class="name">网络编程</div><div class="badge">3</div></a></li>
+                
                     <li><a class="flat-box" href="/categories/设计模式/"><div class="name">设计模式</div><div class="badge">1</div></a></li>
                 
             </ul>
@@ -614,7 +616,7 @@
             <div><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;标签</div>
         </header>
         <div class="content pure">
-            <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/MTV/" style="font-size: 14px; color: #999">MTV</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/restframework/" style="font-size: 14px; color: #999">restframework</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a> <a href="/tags/uWSGI/" style="font-size: 14px; color: #999">uWSGI</a>
+            <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/IO模型/" style="font-size: 14px; color: #999">IO模型</a> <a href="/tags/MTV/" style="font-size: 14px; color: #999">MTV</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Socket/" style="font-size: 14px; color: #999">Socket</a> <a href="/tags/TCP/" style="font-size: 14px; color: #999">TCP</a> <a href="/tags/UDP/" style="font-size: 14px; color: #999">UDP</a> <a href="/tags/restframework/" style="font-size: 14px; color: #999">restframework</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a> <a href="/tags/uWSGI/" style="font-size: 14px; color: #999">uWSGI</a>
         </div>
     </section>
 
