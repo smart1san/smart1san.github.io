@@ -504,7 +504,7 @@
 <ul>
 <li>server类</li>
 </ul>
-<p><img src="https://images2015.cnblogs.com/blog/1036857/201705/1036857-20170505014200961-1776184607.png" alt="server类"></p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1544045255035&amp;di=c034f1bde8078c4d717828e8bbc803e6&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D1106475537%2C2928948223%26fm%3D214%26gp%3D0.jpg" alt="server类"></p>
 <ul>
 <li>request类</li>
 </ul>
@@ -512,9 +512,7 @@
 <ul>
 <li>继承关系</li>
 </ul>
-<p><img src="https://images2015.cnblogs.com/blog/1036857/201705/1036857-20170505015158101-334152905.png" alt="继承关系1"></p>
-<p><img src="https://images2015.cnblogs.com/blog/1036857/201705/1036857-20170505015247148-219054764.png" alt="继承关系2"></p>
-<p><img src="https://images2015.cnblogs.com/blog/1036857/201705/1036857-20170505015356492-1711228984.png" alt="继承关系3"></p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1544045430040&amp;di=ff36cdaf80ba0b95c1989bb4b8bec65b&amp;imgtype=0&amp;src=http%3A%2F%2Fimage.bubuko.com%2Finfo%2F201804%2F20180419011716055263.png" alt="继承关系"></p>
 <p>以下述代码为例，分析socketserver源码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ftpserver=socketserver.ThreadingTCPServer((&apos;127.0.0.1&apos;,8080),FtpServer)</span><br><span class="line">ftpserver.serve_forever()</span><br></pre></td></tr></table></figure>
 <p>查找属性的顺序：ThreadingTCPServer-&gt;ThreadingMixIn-&gt;TCPServer-&gt;BaseServer</p>
@@ -528,20 +526,20 @@
 <p>源码分析总结：</p>
 <p>基于tcp的socketserver我们自己定义的类中的</p>
 <ol>
-<li>　　self.server即套接字对象</li>
-<li>　　self.request即一个链接</li>
-<li>　　self.client_address即客户端地址</li>
+<li>self.server即套接字对象</li>
+<li>self.request即一个链接</li>
+<li>self.client_address即客户端地址</li>
 </ol>
 <p>基于udp的socketserver我们自己定义的类中的</p>
 <ol>
-<li>　　self.request是一个元组（第一个元素是客户端发来的数据，第二部分是服务端的udp套接字对象），如(b’adsf’, &lt;socket.socket fd=200, family=AddressFamily.AF_INET, type=SocketKind.SOCK_DGRAM, proto=0, laddr=(‘127.0.0.1’, 8080)&gt;)</li>
-<li>　　self.client_address即客户端地址</li>
+<li>self.request是一个元组（第一个元素是客户端发来的数据，第二部分是服务端的udp套接字对象），如(b’adsf’, &lt;socket.socket fd=200, family=AddressFamily.AF_INET, type=SocketKind.SOCK_DGRAM, proto=0, laddr=(‘127.0.0.1’, 8080)&gt;)</li>
+<li>self.client_address即客户端地址</li>
 </ol>
 
         </div>
 
         <section class="meta">
-            <time class="time" itemprop="dateUpdated" datetime="2018-12-06T02:35:17+08:00" content="2018-12-06">
+            <time class="time" itemprop="dateUpdated" datetime="2018-12-06T02:45:23+08:00" content="2018-12-06">
                 <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
                 本文最后更新于：2018-12-06
             </time>
