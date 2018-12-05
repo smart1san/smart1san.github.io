@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-05T14:01:56.948Z</updated>
+  <updated>2018-12-05T14:11:13.151Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,14 @@
     <link href="http://yoursite.com/2018/12/05/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%9E%8B/"/>
     <id>http://yoursite.com/2018/12/05/并发编程之生产者消费者模型/</id>
     <published>2018-12-05T14:00:55.460Z</published>
-    <updated>2018-12-05T14:01:56.948Z</updated>
+    <updated>2018-12-05T14:11:13.151Z</updated>
     
-    <content type="html"><![CDATA[<p>生产者消费者模型</p><a id="more"></a><p>生产者消费者模型</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1544029124915&amp;di=9deaae316dcd5ced7a8fb22994c27ca8&amp;imgtype=0&amp;src=http%3A%2F%2Fediterupload.eepw.com.cn%2F200809%2Feb8113270d350df28f31781cf86093fb.jpg" alt="生产者消费者模型"></p><p>生产者消费者模型</p><a id="more"></a><p>生产者消费者模型</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;生产者消费者模型&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp;amp;sec=1544029124915&amp;amp;di=9deaae316dcd5ced7a8fb22994c27ca8&amp;amp;imgtype=0&amp;amp;src=http%3A%2F%2Fediterupload.eepw.com.cn%2F200809%2Feb8113270d350df28f31781cf86093fb.jpg&quot; alt=&quot;生产者消费者模型&quot;&gt;&lt;/p&gt;
+&lt;p&gt;生产者消费者模型&lt;/p&gt;
     
     </summary>
     
@@ -35,6 +36,8 @@
     
     
       <category term="生产者消费者模型" scheme="http://yoursite.com/tags/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%9E%8B/"/>
+    
+      <category term="消息队列" scheme="http://yoursite.com/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
