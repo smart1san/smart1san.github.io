@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>网络编程HTTP协议 | VIP</title>
+  <title>并发编程之多线程 | VIP</title>
   
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -158,14 +158,14 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            <article id="post-网络编程之HTTP协议" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
+            <article id="post-并发编程之多线程" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
     <section class="meta">
         
-            <h1 class="title">网络编程HTTP协议</h1>
+            <h1 class="title">并发编程之多线程</h1>
         
         <time class="time">
             <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-            2018-12-03
+            2018-12-05
         </time>
         
           <div class="browse busuanzi"><i class="fas fa-eye fa-fw" aria-hidden="true"></i>
@@ -177,7 +177,7 @@
     
     <div class="cats">
         <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-        <a class="categories" href="/categories/网络编程/">网络编程</a>
+        <a class="categories" href="/categories/并发编程/">并发编程</a>
     </div>
 
 
@@ -186,109 +186,11 @@
     <section class="article typo">
 
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1543963917868&amp;di=8e495f6d33a89da9a1238f2f8d270a9c&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.dongcoder.com%2Fup%2Finfo%2F201807%2F20180718234110632745.png" alt="Http"></p>
-<p>HTTP协议是Hyper Text Transfer Protocol（超文本传输协议）的缩写,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。 HTTP是一个基于TCP/IP通信协议来传递数据（HTML 文件, 图片文件, 查询结果等）。 </p>
-<a id="more"></a>
-<h1 id="一、HTTP协议简介"><a href="#一、HTTP协议简介" class="headerlink" title="一、HTTP协议简介"></a>一、HTTP协议简介</h1><p>HTTP是一个属于应用层的面向对象的协议，由于其简捷、快速的方式，适用于分布式超媒体信息系统。它于1990年提出，经过几年的使用与发展，得到不断地完善和扩展。HTTP协议工作于客户端-服务端架构为上。浏览器作为HTTP客户端通过URL向HTTP服务端即WEB服务器发送所有请求。Web服务器根据接收到的请求后，向客户端发送响应信息。</p>
-<h1 id="二、HTTP协议的特点"><a href="#二、HTTP协议的特点" class="headerlink" title="二、HTTP协议的特点"></a>二、HTTP协议的特点</h1><p>1.简单快速：客户向服务器请求服务时，只需传送请求方法和路径。请求方法常用的有GET、HEAD、POST。每种方法规定了客户与服务器联系的类型不同。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。</p>
-<p>2.基于TCP/IP协议之上的应用层协议。</p>
-<p>3.无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。</p>
-<p>4.无状态：HTTP是一种不保存状态, 即无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。 HTTP协议 自身不对请求和响应之间的通信状态进行保存。也就是说在HTTP这个 级别,协议对于发送过的请求或响应都不做持久化处理。 </p>
-<p>5.基于请求－响应模式：HTTP协议规定,请求从客户端发出,最后服务器端响应该请求并 返回。换句话说,肯定是先从客户端开始建立通信的,服务器端在没有 接收到请求之前不会发送响应。</p>
-<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1543964511479&amp;di=504efde45d15658340fa4266948c85f5&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D4202735791%2C3161582173%26fm%3D214%26gp%3D0.jpg" alt="Http请求-响应模式"></p>
-<p>6.灵活：HTTP允许传输任意类型的数据对象。正在传输的类型由Content-Type加以标记。</p>
-<h1 id="三、HTTP请求协议与响应协议"><a href="#三、HTTP请求协议与响应协议" class="headerlink" title="三、HTTP请求协议与响应协议"></a>三、HTTP请求协议与响应协议</h1><blockquote>
-<p>http协议包含由浏览器发送数据到服务器需要遵循的请求协议与服务器发送数据到浏览器需要遵循的请求协议。用于HTTP协议交互的信被为HTTP报文。请求端(客户端)的HTTP报文 做请求报文,响应端(服务器端)的 做响应报文。HTTP报文本身是由多行数据构成的字 文本。 </p>
-</blockquote>
-<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1543964905198&amp;di=a8d021f15983a57e3ed9853439864cf2&amp;imgtype=0&amp;src=http%3A%2F%2Fimage.bubuko.com%2Finfo%2F201807%2F20180708214241618317.png" alt="Http请求与响应"></p>
-<h2 id="1-请求协议Request"><a href="#1-请求协议Request" class="headerlink" title="1.请求协议Request"></a>1.请求协议Request</h2><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1544559844&amp;di=e57146b1833f20acc4ef1083dcbbba72&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fimage.bubuko.com%2Finfo%2F201811%2F20181102211532342567.png" alt="Request"></p>
-<h3 id="2-1请求方式"><a href="#2-1请求方式" class="headerlink" title="2.1请求方式"></a>2.1请求方式</h3><ul>
-<li><p>GET与POST请求方式的区别</p>
-<blockquote>
-<ul>
-<li>GET提交的数据会放在URL之后，以<code>?</code>分割URL和传输数据，参数之间以<code>&amp;</code>相连，如login?name=yourname&amp;pwd=123456. POST方法是把提交的数据放在HTTP包的请求体中。</li>
-</ul>
-<ul>
-<li>GET提交的数据大小有限制（因为浏览器对URL的长度有限制），而POST方法提交的数据没有限制.</li>
-<li>GET与POST请求在服务端获取请求数据方式不同。</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li>GET请求头信息</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">GET请求</span><br><span class="line"><span class="comment"># 请求首行</span></span><br><span class="line">    GET / HTTP/1.1\r\n</span><br><span class="line"><span class="comment"># get请求后面的参数</span></span><br><span class="line">GET /?name=lqz&amp;age=18 HTTP/1.1\r\n</span><br><span class="line"><span class="comment"># 请求头</span></span><br><span class="line">Host: 127.0.0.1:8008\r\n</span><br><span class="line">Connection: keep-alive\r\n</span><br><span class="line">Cache-Control: max-age=0\r\n</span><br><span class="line">Upgrade-Insecure-Requests: 1\r\n</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/65.0.3325.181 Safari/537.36\r\n</span><br><span class="line">Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\n</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.9\r\n</span><br><span class="line">Cookie: csrftoken=7xx6BxQDJ6KB0PM7qS8uTA892ACtooNbnnF4LDwlYk1Y7S7nTS81FBqwruizHsxF\r\n\r\n<span class="string">'</span></span><br><span class="line"><span class="string"># 请求体（get请求，请求体为空）</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>POST请求头信息</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 请求首行</span></span><br><span class="line">POST /?name=lqz&amp;age=18 HTTP/1.1\r\n</span><br><span class="line"><span class="comment"># 请求头</span></span><br><span class="line">Host: 127.0.0.1:8008\r\nConnection: keep-alive\r\nContent-Length: 21\r\nCache-Control: max-age=0\r\nOrigin: http://127.0.0.1:8008\r\nUpgrade-Insecure-Requests: 1\r\nContent-Type: application/x-www-form-urlencoded\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nReferer: http://127.0.0.1:8008/?name=lqz&amp;age=18\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: zh-CN,zh;q=0.9\r\nCookie: csrftoken=7xx6BxQDJ6KB0PM7qS8uTA892ACtooNbnnF4LDwlYk1Y7S7nTS81FBqwruizHsxF\r\n\r\n</span><br><span class="line"><span class="comment"># 请求体</span></span><br><span class="line">name=lqz&amp;password=123<span class="string">'</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-响应协议Response"><a href="#2-响应协议Response" class="headerlink" title="2.响应协议Response"></a>2.响应协议Response</h2><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1543965446960&amp;di=e85eb8f2f482c2234983d6429ae4c4eb&amp;imgtype=0&amp;src=http%3A%2F%2Fstatic.zybuluo.com%2Fwmh1106%2Flfn6x3tpi2s8jtrfij1ibyld%2Fimage_1b6oc0q291kc91tbn10pl8iedcs13.png" alt="Response"></p>
-<h3 id="2-1状态码"><a href="#2-1状态码" class="headerlink" title="2.1状态码"></a>2.1状态码</h3><table>
-<thead>
-<tr>
-<th>状态码</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1xx</td>
-<td>指示信息，表示请求已接收，继续处理</td>
-</tr>
-<tr>
-<td>2xx</td>
-<td>成功，表示请求已被处理完毕</td>
-</tr>
-<tr>
-<td>3xx</td>
-<td>重定向，要完成请求必须进行更进一步的操作</td>
-</tr>
-<tr>
-<td>4xx</td>
-<td>客户端错误，请求有语法错误或请求服务器无法实现</td>
-</tr>
-<tr>
-<td>5xx</td>
-<td>服务器端错误，服务器处理请求出错</td>
-</tr>
-</tbody>
-</table>
-<h1 id="四、HTTP工作原理"><a href="#四、HTTP工作原理" class="headerlink" title="四、HTTP工作原理"></a>四、HTTP工作原理</h1><blockquote>
-<p>  HTTP协议定义Web客户端如何从Web服务器请求Web页面，以及服务器如何把Web页面传送给客户端。HTTP协议采用了请求/响应模型。客户端向服务器发送一个请求报文，请求报文包含请求的方法、URL、协议版本、请求头部和请求数据。服务器以一个状态行作为响应，响应的内容包括协议的版本、成功或者错误代码、服务器信息、响应头部和响应数据。 </p>
-</blockquote>
-<h2 id="1-HTTP-请求-响应的步骤"><a href="#1-HTTP-请求-响应的步骤" class="headerlink" title="1. HTTP 请求/响应的步骤"></a>1. HTTP 请求/响应的步骤</h2><h3 id="1-1-客户端连接到Web服务器"><a href="#1-1-客户端连接到Web服务器" class="headerlink" title="1.1 客户端连接到Web服务器"></a>1.1 客户端连接到Web服务器</h3><p>一个HTTP客户端，通常是浏览器，与Web服务器的HTTP端口（默认为80）建立一个TCP套接字连接。例如，<a href="https://www.ice5.vip">https://www.ice5.vip</a></p>
-<h3 id="1-2-发送HTTP请求"><a href="#1-2-发送HTTP请求" class="headerlink" title="1.2 发送HTTP请求"></a>1.2 发送HTTP请求</h3><p>通过TCP套接字，客户端向Web服务器发送一个文本的请求报文，一个请求报文由请求行、请求头部、空行和请求数据4部分组成。 </p>
-<h3 id="1-3-服务器接受请求并返回HTTP响应"><a href="#1-3-服务器接受请求并返回HTTP响应" class="headerlink" title="1.3 服务器接受请求并返回HTTP响应"></a>1.3 服务器接受请求并返回HTTP响应</h3><p>Web服务器解析请求，定位请求资源。服务器将资源复本写到TCP套接字，由客户端读取。一个响应由状态行、响应头部、空行和响应数据4部分组成。 </p>
-<h3 id="1-4-释放连接TCP连接"><a href="#1-4-释放连接TCP连接" class="headerlink" title="1.4 释放连接TCP连接"></a>1.4 释放连接TCP连接</h3><p>若connection 模式为close，则服务器主动关闭TCP连接，客户端被动关闭连接，释放TCP连接；若connection 模式为keepalive，则该连接会保持一段时间，在该时间内可以继续接收请求。</p>
-<h3 id="1-5-客户端浏览器解析HTML内容"><a href="#1-5-客户端浏览器解析HTML内容" class="headerlink" title="1.5 客户端浏览器解析HTML内容"></a>1.5 客户端浏览器解析HTML内容</h3><p>客户端浏览器首先解析状态行，查看表明请求是否成功的状态代码。然后解析每一个响应头，响应头告知以下为若干字节的HTML文档和文档的字符集。客户端浏览器读取响应数据HTML，根据HTML的语法对其进行格式化，并在浏览器窗口中显示。 </p>
-<blockquote>
-<p>例如：在浏览器地址栏键入URL，按下回车之后会经历以下流程：</p>
-<ul>
-<li>1.浏览器向 DNS 服务器请求解析该 URL 中的域名所对应的 IP 地址</li>
-<li>2.解析出 IP 地址后，根据该 IP 地址和默认端口 80，和服务器建立TCP连接</li>
-<li>3.浏览器发出读取文件(URL 中域名后面部分对应的文件)的HTTP 请求，该请求报文作为 TCP 三次握手]的第三个报文的数据发送给服务器</li>
-<li>4.服务器对浏览器请求作出响应，并把对应的 html 文本发送给浏览器</li>
-<li>5.释放 TCP连接</li>
-<li>6.浏览器将该 html 文本并显示内容</li>
-</ul>
-</blockquote>
-<h1 id="五、URL简介"><a href="#五、URL简介" class="headerlink" title="五、URL简介"></a>五、URL简介</h1><blockquote>
-<p>HTTP使用统一资源标识符（Uniform Resource Identifiers, URI）来传输数据和建立连接。URL是一种特殊类型的URI，包含了用于查找某个资源的足够的信息</p>
-</blockquote>
-<blockquote>
-<p>  URL,全称是统一资源定位符(Uniform Resource Locator)，对可以从互联网上得到的资源的位置和访问方法的一种简洁的表示，是互联网上标准资源的地址。互联网上的每个文件都有一个唯一的URL，它包含的信息指出文件的位置以及浏览器应该怎么处理它</p>
-</blockquote>
-<h2 id="1-格式"><a href="#1-格式" class="headerlink" title="1.格式"></a>1.格式</h2><p>　协议：//IP:端口（80）/路径?name=yourname&amp;pwd=123456 </p>
-<blockquote>
-<p>  如：<a href="https://www.ice5.vip/2018/12/03/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">https://www.ice5.vip/name=myname&amp;pwd=123</a></p>
-<p>  ？之前的是请求路径，？之后的是 <code>GET</code>请求数据部分 </p>
-</blockquote>
-
+            <a id="more"></a>
         </div>
 
         <section class="meta">
-            <time class="time" itemprop="dateUpdated" datetime="2018-12-05T05:05:11+08:00" content="2018-12-05">
+            <time class="time" itemprop="dateUpdated" datetime="2018-12-05T19:36:22+08:00" content="2018-12-05">
                 <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
                 本文最后更新于：2018-12-05
             </time>
@@ -296,7 +198,7 @@
                 
                 <div class="tags">
                     <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
-                    <a class="tag" href="/tags/HTTP/">HTTP</a>
+                    <a class="tag" href="/tags/多线程/">多线程</a>
                 </div>
             
         </section>
@@ -308,9 +210,9 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
                             <h4>
-                                <a href="/2018/12/03/网络编程基础/" rel="prev" title="网络编程基础">
+                                <a href="/并发编程之IO模型/" rel="prev" title="并发编程之 IO模型">
                                   
-                                      网络编程基础
+                                      并发编程之 IO模型
                                   
                                 </a>
                             </h4>
@@ -318,7 +220,7 @@
                                 
                                 <h6 class="tags">
                                     <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
-                                    <a class="tag" href="/tags/TCP/">TCP</a>, <a class="tag" href="/tags/UDP/">UDP</a>
+                                    <a class="tag" href="/tags/IO模型/">IO模型</a>
                                 </h6>
                             
                         </span>
@@ -329,9 +231,9 @@
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2018/12/03/Python实现23种设计模式/" rel="prev" title="Python实现23种设计模式">
+                                <a href="/网络编程之Socket/" rel="prev" title="网络编程Socket">
                                     
-                                        Python实现23种设计模式
+                                        网络编程Socket
                                     
                                 </a>
                             </h4>
@@ -339,7 +241,7 @@
                                 
                                 <h6 class="tags">
                                     <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
-                                    <a class="tag" href="/tags/Python/">Python</a>
+                                    <a class="tag" href="/tags/Socket/">Socket</a>
                                 </h6>
                             
                         </span>
@@ -366,15 +268,15 @@
         <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
         <ul>
             
-                <li><a href="https://www.ice5.vip/2018/12/03/并发编程之多进程/">并发编程之多进程</a></li>
+                <li><a href="https://www.ice5.vip/并发编程之协程/">并发编程之协程</a></li>
             
-                <li><a href="https://www.ice5.vip/2018/12/03/网络编程基础/">网络编程基础</a></li>
+                <li><a href="https://www.ice5.vip/并发编程之IO模型/">并发编程之 IO模型</a></li>
             
-                <li><a href="https://www.ice5.vip/2018/12/03/Python实现23种设计模式/">Python实现23种设计模式</a></li>
+                <li><a href="https://www.ice5.vip/网络编程之Socket/">网络编程Socket</a></li>
             
-                <li><a href="https://www.ice5.vip/2018/12/03/设计模式/">设计模式</a></li>
+                <li><a href="https://www.ice5.vip/Nginx部署/">WEB服务器之Nginx</a></li>
             
-                <li><a href="https://www.ice5.vip/2018/12/03/Git/">Git的使用</a></li>
+                <li><a href="https://www.ice5.vip/MySQL/">MySQL基础知识</a></li>
             
         </ul>
     </div>
@@ -404,7 +306,7 @@
 
 <script>
     window.subData = {
-        title: '网络编程HTTP协议',
+        title: '并发编程之多线程',
         tools: true
     }
 </script>
@@ -418,7 +320,7 @@
   <section class="m_widget author">
     
       <div class="header">
-        <img class="avatar" src="https://xaoxuu.com/assets/img/avatar.jpg">
+        <img class="avatar" src="https://image.baidu.com/search/detail?ct=503316480&amp;z=0&amp;ipn=d&amp;word=%E6%B5%B7%E8%B4%BC%E7%8E%8B&amp;step_word=&amp;hs=0&amp;pn=5&amp;spn=0&amp;di=96176457770&amp;pi=0&amp;rn=1&amp;tn=baiduimagedetail&amp;is=0%2C0&amp;istype=2&amp;ie=utf-8&amp;oe=utf-8&amp;in=&amp;cl=2&amp;lm=-1&amp;st=-1&amp;cs=3529194678%2C1452779452&amp;os=2224944538%2C450820020&amp;simid=0%2C0&amp;adpicid=0&amp;lpn=0&amp;ln=1851&amp;fr=&amp;fmq=1544109805594_R&amp;fm=result&amp;ic=0&amp;s=undefined&amp;hd=0&amp;latest=0&amp;copyright=0&amp;se=&amp;sme=&amp;tab=0&amp;width=&amp;height=&amp;face=undefined&amp;ist=&amp;jit=&amp;cg=&amp;bdtype=11&amp;oriquery=&amp;objurl=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn08%2F740%2Fw1440h900%2F20181019%2F049a-hmrasqs2496321.jpg&amp;fromurl=ippr_z2C%24qAzdH3FAzdH3Fh_z%26e3Bftgw_z%26e3Bv54_z%26e3BvgAzdH3Fw6ptvsj_c0aclbmm0c_8c98w0d0naa8aakmar_z%26e3Bip4s&amp;gsm=0&amp;rpstart=0&amp;rpnum=0&amp;islist=&amp;querylist=&amp;selected_tags=0">
       </div>
     
     
@@ -509,16 +411,6 @@
     
     
         
-    <section class="m_widget toc-wrapper">
-        <header class="header pure">
-            <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;目录</div>
-            <div class="wrapper"><a class="s-toc rightBtn" title="固定到顶部" target="_blank" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
-        </header>
-        <div class="content pure">
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、HTTP协议简介"><span class="toc-text">一、HTTP协议简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、HTTP协议的特点"><span class="toc-text">二、HTTP协议的特点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、HTTP请求协议与响应协议"><span class="toc-text">三、HTTP请求协议与响应协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-请求协议Request"><span class="toc-text">1.请求协议Request</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1请求方式"><span class="toc-text">2.1请求方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-响应协议Response"><span class="toc-text">2.响应协议Response</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1状态码"><span class="toc-text">2.1状态码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、HTTP工作原理"><span class="toc-text">四、HTTP工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-HTTP-请求-响应的步骤"><span class="toc-text">1. HTTP 请求/响应的步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-客户端连接到Web服务器"><span class="toc-text">1.1 客户端连接到Web服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-发送HTTP请求"><span class="toc-text">1.2 发送HTTP请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-服务器接受请求并返回HTTP响应"><span class="toc-text">1.3 服务器接受请求并返回HTTP响应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-释放连接TCP连接"><span class="toc-text">1.4 释放连接TCP连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-客户端浏览器解析HTML内容"><span class="toc-text">1.5 客户端浏览器解析HTML内容</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、URL简介"><span class="toc-text">五、URL简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-格式"><span class="toc-text">1.格式</span></a></li></ol></li></ol>
-        </div>
-    </section>
-
 
     
     
