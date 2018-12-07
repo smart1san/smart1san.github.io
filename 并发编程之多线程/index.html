@@ -189,16 +189,69 @@
             <p><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2178964645,4286259731&amp;fm=26&amp;gp=0.jpg" alt="多线程"></p>
 <p>在传统操作系统中，<strong>每个进程有一个地址空间，而且默认就有一个控制线程</strong>。线程顾名思义，就是一条流水线工作的过程，一条流水线必须属于一个车间，一个车间的工作过程是一个进程。车间负责把资源整合到一起，是一个资源单位，而一个车间内至少有一个流水线。流水线的工作需要电源，电源就相当于CPU。所以，<strong>进程只是用来把资源集中到一起（进程只是一个资源单位，或者说资源集合），而线程才是CPU上的执行单位。</strong> </p>
 <a id="more"></a>
-<h1 id="一、线程的概念"><a href="#一、线程的概念" class="headerlink" title="一、线程的概念"></a>一、线程的概念</h1><blockquote>
+<h1 id="一、线程的理论基础"><a href="#一、线程的理论基础" class="headerlink" title="一、线程的理论基础"></a>一、线程的理论基础</h1><h2 id="1-线程的概念"><a href="#1-线程的概念" class="headerlink" title="1.线程的概念"></a>1.线程的概念</h2><blockquote>
 <p>在一个进程中存在多个控制线程，多个控制线程共享该进程的地址空间，相当于一个车间内有多条流水线，都共用一个车间的资源。 </p>
 </blockquote>
-
+<h2 id="2-创建线程的开销"><a href="#2-创建线程的开销" class="headerlink" title="2.创建线程的开销"></a>2.创建线程的开销</h2><ul>
+<li>创建进程的开销要远大于线程？ </li>
+</ul>
+<p>如果我们的软件是一个工厂，该工厂有多条流水线，流水线工作需要电源，电源只有一个即CPU（单核CPU）</p>
+<p>一个车间就是一个进程，一个车间至少一条流水线（一个进程至少一个线程）</p>
+<p>创建一个进程，就是创建一个车间（申请空间，在该空间内建至少一条流水线）</p>
+<p>而建线程，就只是在一个车间内造一条流水线，无需申请空间，所以创建开销小</p>
+<ul>
+<li>进程之间是竞争关系，线程之间是协作关系？ </li>
+</ul>
+<p>车间直接是竞争/抢电源的关系，竞争（不同的进程直接是竞争关系，是不同的程序员写的程序运行的，迅雷抢占其他进程的网速，360把其他进程当做病毒干死） 一个车间的不同流水线式协同工作的关系（同一个进程的线程之间是合作关系，是同一个程序写的程序内开启动，迅雷内的线程是合作关系，不会自己干自己） </p>
+<h2 id="3-线程与进程的区别"><a href="#3-线程与进程的区别" class="headerlink" title="3.线程与进程的区别"></a>3.线程与进程的区别</h2><ol>
+<li><p>Threads share the address space of the process that created it; processes have their own address space.</p>
+<blockquote>
+<p>  创建线程的进程的地址空间在该进程内是共享的；相反的各个进程有自己的地址空间。</p>
+</blockquote>
+</li>
+<li><p>Threads have direct access to the data segment of its process; processes have their own copy of the data segment of the parent process.</p>
+<blockquote>
+<p>线程可以直接访问其进程的数据；但是进程有它们自己的父进程的数据的副本。</p>
+</blockquote>
+</li>
+<li><p>Threads can directly communicate with other threads of its process; processes must use interprocess communication to communicate with sibling processes.</p>
+<blockquote>
+<p>  线程可以直接与自己进程内的其他线程通信；但是不同的进程间必须使用进程间通信来与兄弟进程通信。</p>
+</blockquote>
+</li>
+<li><p>New threads are easily created; new processes require duplication of the parent process.</p>
+<blockquote>
+<p>  线程的创建很容易；但是创建新的进程赋值父进程。</p>
+</blockquote>
+</li>
+<li><p>Threads can exercise considerable control over threads of the same process; processes can only exercise control over child processes.</p>
+<blockquote>
+<p>线程可以对同一个进程内的其他线程进行控制；但是进程只能对子进程执行控制。</p>
+</blockquote>
+</li>
+<li><p>Changes to the main thread (cancellation, priority change, etc.) may affect the behavior of the other threads of the process; changes to the parent process does not affect child processes.</p>
+<blockquote>
+<p>主线程的任何变动（取消、优先级更改等）可能会影响到进程内其他线程的行为；父进程的更改不影响子进程。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="4-为何要用多线程"><a href="#4-为何要用多线程" class="headerlink" title="4.为何要用多线程"></a>4.为何要用多线程</h2><p>多线程指的是，在一个进程中开启多个线程，简单的讲：如果多个任务共用一块地址空间，那么必须在一个进程内开启多个线程。详细的讲分为4点：</p>
+<p>　　1. 多线程共享一个进程的地址空间</p>
+<p>​      2. 线程比进程更轻量级，线程比进程更容易创建可撤销，在许多操作系统中，创建一个线程比创建一个进程要快10-100倍，在有大量线程需要动态和快速修改时，这一特性很有用</p>
+<p>​      3. 若多个线程都是CPU密集型的，那么并不能获得性能上的增强，但是如果存在大量的计算和大量的I/O处理，拥有多个线程允许这些活动彼此重叠运行，从而会加快程序执行的速度。</p>
+<p>​      4. 在多CPU系统中，为了最大限度的利用多核，可以开启多个线程，比开进程开销要小的多。（这一条并不适用于Python）</p>
+<h2 id="5-多线程的应用举例"><a href="#5-多线程的应用举例" class="headerlink" title="5.多线程的应用举例"></a>5.多线程的应用举例</h2><p>开启一个字处理软件进程，该进程肯定需要办不止一件事情，比如监听键盘输入，处理文字，定时自动将文字保存到硬盘，这三个任务操作的都是同一块数据，因而不能用多进程。只能在一个进程里并发地开启三个线程,如果是单线程，那就只能是，键盘输入时，不能处理文字和自动保存，自动保存时又不能输入和处理文字。 </p>
+<hr>
+<blockquote>
+<p>  以下知识了解即可</p>
+</blockquote>
+<h2 id="6-经典的线程模型"><a href="#6-经典的线程模型" class="headerlink" title="6. 经典的线程模型"></a>6. 经典的线程模型</h2><h2 id="7-POSIX线程"><a href="#7-POSIX线程" class="headerlink" title="7. POSIX线程"></a>7. POSIX线程</h2><h2 id="8-在用户空间实现的线程"><a href="#8-在用户空间实现的线程" class="headerlink" title="8.在用户空间实现的线程"></a>8.在用户空间实现的线程</h2><h2 id="9-在内核空间实现的线程"><a href="#9-在内核空间实现的线程" class="headerlink" title="9.在内核空间实现的线程"></a>9.在内核空间实现的线程</h2><h2 id="10-用户级与内核级线程的对比"><a href="#10-用户级与内核级线程的对比" class="headerlink" title="10.用户级与内核级线程的对比"></a>10.用户级与内核级线程的对比</h2><h2 id="11-混合实现"><a href="#11-混合实现" class="headerlink" title="11.混合实现"></a>11.混合实现</h2>
         </div>
 
         <section class="meta">
-            <time class="time" itemprop="dateUpdated" datetime="2018-12-07T23:40:34+08:00" content="2018-12-07">
+            <time class="time" itemprop="dateUpdated" datetime="2018-12-08T00:06:48+08:00" content="2018-12-08">
                 <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
-                本文最后更新于：2018-12-07
+                本文最后更新于：2018-12-08
             </time>
             
                 
@@ -423,7 +476,7 @@
             <div class="wrapper"><a class="s-toc rightBtn" title="固定到顶部" target="_blank" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
         </header>
         <div class="content pure">
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、线程的概念"><span class="toc-text">一、线程的概念</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、线程的理论基础"><span class="toc-text">一、线程的理论基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-线程的概念"><span class="toc-text">1.线程的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-创建线程的开销"><span class="toc-text">2.创建线程的开销</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-线程与进程的区别"><span class="toc-text">3.线程与进程的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-为何要用多线程"><span class="toc-text">4.为何要用多线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-多线程的应用举例"><span class="toc-text">5.多线程的应用举例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-经典的线程模型"><span class="toc-text">6. 经典的线程模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-POSIX线程"><span class="toc-text">7. POSIX线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-在用户空间实现的线程"><span class="toc-text">8.在用户空间实现的线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-在内核空间实现的线程"><span class="toc-text">9.在内核空间实现的线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-用户级与内核级线程的对比"><span class="toc-text">10.用户级与内核级线程的对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-混合实现"><span class="toc-text">11.混合实现</span></a></li></ol></li></ol>
         </div>
     </section>
 
