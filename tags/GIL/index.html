@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: 多进程 | VIP</title>
+  <title>Tag: GIL | VIP</title>
   
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -160,7 +160,7 @@
         <div class='l_main'>
             
     <script>
-        window.subData= { title:'标签 : 多进程'}
+        window.subData= { title:'标签 : GIL'}
     </script>
 
 
@@ -170,14 +170,14 @@
             <article class="post reveal ">
     <section class="meta">
         <h2 class="title">
-            <a href="/并发编程之多进程/">
+            <a href="/并发编程之多线程/">
                 
-                    并发编程之多进程
+                    并发编程之多线程
                 
             </a>
         </h2>
         <time class="time">
-            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-12-03
+            <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-12-05
         </time>
         
     
@@ -190,10 +190,11 @@
     </section>
 
     <section class="article typo">
-        <p>进程简单点说就是一个正在执行的过程。进程是对所有程序中正在运行的程序的一个抽象。进程的概念起源于操作系统，是操作系统最核心的概念，也是操作系统提供的最古老也是最重要的抽象概念之一。操作系统的其他所有内容都是围绕进程的概念展开的。若想要真正了解进程，则必须事先了解操作系统。</p>
+        <p><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2178964645,4286259731&amp;fm=26&amp;gp=0.jpg" alt="多线程"></p>
+<p>在传统操作系统中，<strong>每个进程有一个地址空间，而且默认就有一个控制线程</strong>。线程顾名思义，就是一条流水线工作的过程，一条流水线必须属于一个车间，一个车间的工作过程是一个进程。车间负责把资源整合到一起，是一个资源单位，而一个车间内至少有一个流水线。流水线的工作需要电源，电源就相当于CPU。所以，<strong>进程只是用来把资源集中到一起（进程只是一个资源单位，或者说资源集合），而线程才是CPU上的执行单位。</strong> </p>
         
             <div class="readmore">
-                <a href="/并发编程之多进程/" class="flat-box">
+                <a href="/并发编程之多线程/" class="flat-box">
                     <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
                     阅读全文
                 </a>
@@ -203,7 +204,11 @@
         
             <div class="full-width auto-padding tags">
                 
-                    <a href="/tags/多进程/"><i class="fas fa-tag fa-fw"></i>&nbsp;多进程</a>
+                    <a href="/tags/Threading/"><i class="fas fa-tag fa-fw"></i>&nbsp;Threading</a>
+                
+                    <a href="/tags/GIL/"><i class="fas fa-tag fa-fw"></i>&nbsp;GIL</a>
+                
+                    <a href="/tags/Lock-Rlock/"><i class="fas fa-tag fa-fw"></i>&nbsp;Lock/Rlock</a>
                 
             </div>
         
@@ -307,7 +312,7 @@
             <div><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;标签</div>
         </header>
         <div class="content pure">
-            <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/IO模型/" style="font-size: 14px; color: #999">IO模型</a> <a href="/tags/MTV/" style="font-size: 14px; color: #999">MTV</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Socket/" style="font-size: 14px; color: #999">Socket</a> <a href="/tags/TCP/" style="font-size: 14px; color: #999">TCP</a> <a href="/tags/UDP/" style="font-size: 14px; color: #999">UDP</a> <a href="/tags/restframework/" style="font-size: 14px; color: #999">restframework</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a> <a href="/tags/uWSGI/" style="font-size: 14px; color: #999">uWSGI</a> <a href="/tags/协程/" style="font-size: 14px; color: #999">协程</a> <a href="/tags/多线程/" style="font-size: 14px; color: #999">多线程</a> <a href="/tags/多进程/" style="font-size: 14px; color: #999">多进程</a> <a href="/tags/消息队列/" style="font-size: 14px; color: #999">消息队列</a> <a href="/tags/生产者消费者模型/" style="font-size: 14px; color: #999">生产者消费者模型</a>
+            <a href="/tags/GIL/" style="font-size: 14px; color: #999">GIL</a> <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/IO模型/" style="font-size: 14px; color: #999">IO模型</a> <a href="/tags/Lock-Rlock/" style="font-size: 14px; color: #999">Lock/Rlock</a> <a href="/tags/MTV/" style="font-size: 14px; color: #999">MTV</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Socket/" style="font-size: 14px; color: #999">Socket</a> <a href="/tags/TCP/" style="font-size: 14px; color: #999">TCP</a> <a href="/tags/Threading/" style="font-size: 14px; color: #999">Threading</a> <a href="/tags/UDP/" style="font-size: 14px; color: #999">UDP</a> <a href="/tags/multiprocessing/" style="font-size: 14px; color: #999">multiprocessing</a> <a href="/tags/restframework/" style="font-size: 14px; color: #999">restframework</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a> <a href="/tags/uWSGI/" style="font-size: 14px; color: #999">uWSGI</a> <a href="/tags/协程/" style="font-size: 14px; color: #999">协程</a> <a href="/tags/消息队列/" style="font-size: 14px; color: #999">消息队列</a> <a href="/tags/生产者消费者模型/" style="font-size: 14px; color: #999">生产者消费者模型</a>
         </div>
     </section>
 

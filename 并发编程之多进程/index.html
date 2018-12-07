@@ -210,7 +210,7 @@
 <h2 id="4-同步-异步-amp-阻塞-非阻塞"><a href="#4-同步-异步-amp-阻塞-非阻塞" class="headerlink" title="4.同步/异步 &amp;阻塞/非阻塞"></a>4.同步/异步 <code>&amp;</code>阻塞/非阻塞</h2><h3 id="4-1-同步"><a href="#4-1-同步" class="headerlink" title="4.1.同步"></a>4.1.同步</h3><blockquote>
 <p>  所谓同步，就是在发出一个功能调用时，在没有得到结果之前，该调用就不会返回。按照这个定义，其实绝大多数函数都是同步调用。但是一般而言，我们在说同步、异步的时候，特指那些需要其他部件协作或者需要一定时间完成的任务。</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#举例：</span></span><br><span class="line"><span class="number">1.</span> multiprocessing.Pool下的apply <span class="comment">#发起同步调用后，就在原地等着任务结束，根本不考虑任务是在计算还是在io阻塞，总之就是一股脑地等任务结束</span></span><br><span class="line"><span class="number">2.</span> concurrent.futures.ProcessPoolExecutor().submit(func,).result()</span><br><span class="line"><span class="number">3.</span> concurrent.futures.ThreadPoolExecutor().submit(func,).result()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 举例：</span></span><br><span class="line"><span class="number">1.</span> multiprocessing.Pool下的apply <span class="comment"># 发起同步调用后，就在原地等着任务结束，根本不考虑任务是在计算还是在io阻塞，总之就是一股脑地等任务结束</span></span><br><span class="line"><span class="number">2.</span> concurrent.futures.ProcessPoolExecutor().submit(func,).result()</span><br><span class="line"><span class="number">3.</span> concurrent.futures.ThreadPoolExecutor().submit(func,).result()</span><br></pre></td></tr></table></figure>
 <h3 id="4-2-异步"><a href="#4-2-异步" class="headerlink" title="4.2.异步"></a>4.2.异步</h3><blockquote>
 <p>异步的概念和同步相对。当一个异步功能调用发出后，调用者不能立刻得到结果。当该异步功能完成后，通过状态、通知或回调来通知调用者。如果异步功能用状态来通知，那么调用者就需要每隔一定时间检查一次，效率就很低（有些初学多线程编程的人，总喜欢用一个循环去检查某个变量的值，这其实是一 种很严重的错误）。如果是使用通知的方式，效率则很高，因为异步功能几乎不需要做额外的操作。至于回调函数，其实和通知没太多区别。</p>
 </blockquote>
@@ -546,15 +546,15 @@
         </div>
 
         <section class="meta">
-            <time class="time" itemprop="dateUpdated" datetime="2018-12-05T23:22:05+08:00" content="2018-12-05">
+            <time class="time" itemprop="dateUpdated" datetime="2018-12-08T00:17:16+08:00" content="2018-12-08">
                 <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
-                本文最后更新于：2018-12-05
+                本文最后更新于：2018-12-08
             </time>
             
                 
                 <div class="tags">
                     <i class="fas fa-tags fa-fw" aria-hidden="true"></i>
-                    <a class="tag" href="/tags/多进程/">多进程</a>
+                    <a class="tag" href="/tags/multiprocessing/">multiprocessing</a>
                 </div>
             
         </section>
@@ -759,7 +759,7 @@
             <div><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;标签</div>
         </header>
         <div class="content pure">
-            <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/IO模型/" style="font-size: 14px; color: #999">IO模型</a> <a href="/tags/MTV/" style="font-size: 14px; color: #999">MTV</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Socket/" style="font-size: 14px; color: #999">Socket</a> <a href="/tags/TCP/" style="font-size: 14px; color: #999">TCP</a> <a href="/tags/UDP/" style="font-size: 14px; color: #999">UDP</a> <a href="/tags/restframework/" style="font-size: 14px; color: #999">restframework</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a> <a href="/tags/uWSGI/" style="font-size: 14px; color: #999">uWSGI</a> <a href="/tags/协程/" style="font-size: 14px; color: #999">协程</a> <a href="/tags/多线程/" style="font-size: 14px; color: #999">多线程</a> <a href="/tags/多进程/" style="font-size: 14px; color: #999">多进程</a> <a href="/tags/消息队列/" style="font-size: 14px; color: #999">消息队列</a> <a href="/tags/生产者消费者模型/" style="font-size: 14px; color: #999">生产者消费者模型</a>
+            <a href="/tags/GIL/" style="font-size: 14px; color: #999">GIL</a> <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/IO模型/" style="font-size: 14px; color: #999">IO模型</a> <a href="/tags/Lock-Rlock/" style="font-size: 14px; color: #999">Lock/Rlock</a> <a href="/tags/MTV/" style="font-size: 14px; color: #999">MTV</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Socket/" style="font-size: 14px; color: #999">Socket</a> <a href="/tags/TCP/" style="font-size: 14px; color: #999">TCP</a> <a href="/tags/Threading/" style="font-size: 14px; color: #999">Threading</a> <a href="/tags/UDP/" style="font-size: 14px; color: #999">UDP</a> <a href="/tags/multiprocessing/" style="font-size: 14px; color: #999">multiprocessing</a> <a href="/tags/restframework/" style="font-size: 14px; color: #999">restframework</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a> <a href="/tags/uWSGI/" style="font-size: 14px; color: #999">uWSGI</a> <a href="/tags/协程/" style="font-size: 14px; color: #999">协程</a> <a href="/tags/消息队列/" style="font-size: 14px; color: #999">消息队列</a> <a href="/tags/生产者消费者模型/" style="font-size: 14px; color: #999">生产者消费者模型</a>
         </div>
     </section>
 
