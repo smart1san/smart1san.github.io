@@ -78,7 +78,7 @@
       <link href="//%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
       <url>//%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2178964645,4286259731&amp;fm=26&amp;gp=0.jpg" alt="多线程"></p><p>在传统操作系统中，<strong>每个进程有一个地址空间，而且默认就有一个控制线程</strong>。线程顾名思义，就是一条流水线工作的过程，一条流水线必须属于一个车间，一个车间的工作过程是一个进程。车间负责把资源整合到一起，是一个资源单位，而一个车间内至少有一个流水线。流水线的工作需要电源，电源就相当于CPU。所以，<strong>进程只是用来把资源集中到一起（进程只是一个资源单位，或者说资源集合），而线程才是CPU上的执行单位。</strong> </p><a id="more"></a><h1 id="一、线程的概念"><a href="#一、线程的概念" class="headerlink" title="一、线程的概念"></a>一、线程的概念</h1><blockquote><p>在一个进程中存在多个控制线程，多个控制线程共享该进程的地址空间，相当于一个车间内有多条流水线，都共用一个车间的资源。 </p></blockquote>]]></content>
       
       
       <categories>
